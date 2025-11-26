@@ -1,0 +1,8 @@
+{ 
+    "API_BASE": "https://api.warzone.network",
+    "NAME": "Warzone",
+    "SERVER_ADDRESS": "play.warzone.network",
+    "STORE": "https://warz.one/store",
+    "DISCORD": "https://warz.one/discord",
+    "TWITTER": "WarzoneMC"
+}

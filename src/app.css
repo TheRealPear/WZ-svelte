@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui" {
+   logs: false;
+   themes: light --default;
+}
+
+::selection {
+	background-color: #5e178a;
+   color: white;
+}
