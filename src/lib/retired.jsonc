@@ -1,0 +1,341 @@
+// List of former Warzone staff
+// Some staff may have multiple tenures. Use the most recent for the date field.
+// If someone held multiple ranks, you can make an array. Their highest rank must be listed first.
+  // Junior Moderator -> Moderator -> Senior Moderator -> Administrator
+  // Developer
+  // Map Developer -> Head Map Developer
+  // Events -> Head of Events
+// Applicants who failed their probationary phase are not counted as staff and therefore will not be listed here.
+// Former staff who were demoted for extraordinary reasons will also not be listed here.
+[
+  {
+    "uuid": "c5772145-2c33-49e6-8729-cef7cc20f0cc",
+    "username": "Disastur",
+    "role": "Former Moderator",
+    "date": "2018-01-27"
+  },
+  {
+    "uuid": "b13b0b00-a8f9-422b-8963-b3d18bf80aa6",
+    "username": "Bearinx",
+    "role": "Former Moderator",
+    "date": "2018-02-10"
+  },
+  {
+    "uuid": "400cc2c9-a23c-4a48-b4b4-e9bde6caefc6", // verify if account correct
+    "username": "crumbface",
+    "role": "Former Moderator",
+    "date": "2018-02-10"
+  },
+  {
+    "uuid": "b149f1ae-3a31-45a7-a521-56c92ebbb282",
+    "username": "Blue_Monkey_12",
+    "role": "Former Jr Moderator",
+    "date": "2018-03-05"
+  },
+  {
+    "uuid": "25ad12ce-529f-4063-8ca6-89d6fde97c06", // verify if account correct
+    "username": "Cryor",
+    "role": "Former Jr Moderator",
+    "date": "2018-03-12"
+  },
+  {
+    "uuid": "51eafe4c-3e3d-4431-9432-65421138b589",
+    "username": "iCleanUp",
+    "role": "Former Moderator",
+    "date": "2018-04-03"
+  },
+  {
+    "uuid": "577a90bf-1580-475c-8d5b-c5565a5d0bb5",
+    "username": "Spazzs",
+    "role": "Former Moderator",
+    "date": "2018-04-03"
+  },
+  {
+    "uuid": "b3d091f3-d94f-4546-a908-6a513d260615",
+    "username": "Goriest",
+    "role": "Former Moderator",
+    "date": "2018-04-22"
+  },
+
+  {
+    "uuid": "17dd7bc4-338b-49fa-ac76-8339b4102ac3",
+    "username": "Degnul",
+    "role": "Former Moderator",
+    "date": "2018-05-07"
+  },
+  {
+    "uuid": "39a9e1b5-1e1d-40c0-8c16-69a9568efa72",
+    "username": "Teejers",
+    "role": "Former Administrator",
+    "date": "2018-05-19"
+  },
+  {
+    "uuid": "3f9e78fe-18bd-478c-a0b2-305198d23a0a",
+    "username": "MatrixTunnel",
+    "role": "Former Administrator",
+    "date": "2018-05-19"
+  },
+  {
+    "uuid": "6fd9815b-d3c0-44f3-8f86-a603a49b65fc", // verify if account correct
+    "username": "LightningStrike",
+    "role": "Former Moderator",
+    "date": "2018-05-19"
+  },
+  {
+    "uuid": "bd15a8a5-523d-49f4-9876-f403a882d813",
+    "username": "MattBSG",
+    "role": "Former Senior Moderator",
+    "date": "2018-05-20"
+  },
+  {
+    "uuid": "5e280db7-0ca5-457d-8222-63e6fcbf42dd", // verify if account correct
+    "username": "5N1",
+    "role": "Former Jr Moderator",
+    "date": "2018-09-13"
+  },
+  {
+    "uuid": "32d6d67d-645d-4341-9173-765426cd4bc3",
+    "username": "PandaChan",
+    "role": "Former Moderator",
+    "date": "2018-09-29"
+  },
+
+  {
+    "uuid": "8918bebc-c3ff-4047-99cc-7d6adf644ad6",
+    "username": "DylanDownUnder",
+    "role": "Former Jr Moderator",
+    "date": "2018-09-30"
+  },
+  {
+    "uuid": "01f0eb33-529f-43b2-80bb-cd46695b4d38",
+    "username": "Zakuree",
+    "role": "Former Moderator",
+    "date": "2018-09-30"
+  },
+  {
+    "uuid": "", // unknown uuid
+    "username": "Kaece",
+    "role": "Former Moderator",
+    "date": "2018-10-15"
+  },
+  {
+    "uuid": "", // unknown uuid
+    "username": "Vinixs",
+    "role": "Former Moderator",
+    "date": "2019-05-16"
+  },
+  {
+    "uuid": "54592f49-ac9e-475e-81a1-ddf73a7f08d6",
+    "username": "Xounaut",
+    "role": "Former Moderator",
+    "date": "2019-08-10"
+  },
+  {
+    "uuid": "8074636e-9270-4d56-b7e0-f088fde3fe85",
+    "username": "Nisr",
+    "role": "Former Moderator",
+    "date": "2019-08-17"
+  },
+  {
+    "uuid": "5ca16ea3-0711-4f3d-84a0-0f67ae66605c",
+    "username": "SlickNicky10",
+    "role": "Former Moderator",
+    "date": "2019-08-17"
+  },
+  {
+    "uuid": "8e96ab64-74fa-46ab-b436-d35187e118af",
+    "username": "Mega_Rascal",
+    "role": "Former Moderator",
+    "date": "2019-08-17"
+  },
+  {
+    "uuid": "7e9f07ad-2328-405d-9573-297759e0f25b",
+    "username": "Motionq",
+    "role": "Former Senior Moderator",
+    "date": "2019-08-23"
+  },
+  {
+    "uuid": "a9f11454-beac-4cc3-a138-1780802c8794",
+    "username": "Crazy_",
+    "role": [
+      "Former Senior Moderator",
+      "Former Map Developer"
+    ],
+    "date": "2019-09-04"
+  },
+  {
+    "uuid": "fe7eae77-c372-47b6-bf41-fd69d9981362",
+    "username": "Ninventoo",
+    "role": "Former Moderator",
+    "date": "2019-10-27"
+  },
+  {
+    "uuid": "0460ca95-02de-4e85-9d92-41e5ae518e47",
+    "username": "_Gingey_",
+    "role": "Former Senior Moderator",
+    "date": "2021-03-14"
+  },
+  {
+    "uuid": "2d72210d-0779-498f-b6fa-04a497ec66ec",
+    "username": "ekuzo",
+    "role": "Former Moderator",
+    "date": "2021-05-01"
+  },
+  {
+    "uuid": "ccb60a9d-ee86-4de3-a796-f6eff04771b2",
+    "username": "Ruffen",
+    "role": "Former Moderator",
+    "date": "2021-05-17"
+  },
+  {
+    "uuid": "53af1e46-7424-485b-97de-7bf8d854a2aa",
+    "username": "__BT",
+    "role": [
+      "Former Senior Moderator",
+      "Former Map Developer"
+    ],
+    "date": "2021-05-25"
+  },
+  {
+    "uuid": "c78d4660-635a-417c-ad28-b432b6804f6b",
+    "username": "Pndq",
+    "role": "Former Jr Moderator",
+    "date": "2021-06-18"
+  },
+  {
+    "uuid": "69f26e35-cccc-439c-9234-aff5eac24213",
+    "username": "Centrect",
+    "role": "Former Social Media Manager",
+    "date": "2021-07-18"
+  },
+  {
+    "uuid": "", // unknown uuid
+    "username": "Ben87",
+    "role": "Former Events",
+    "date": "2021-07-23"
+  },
+  {
+    "uuid": "74232ccf-93df-40fb-a208-3f3419e7f384",
+    "username": "BallisticMudkip",
+    "role": "Former Moderator",
+    "date": "2021-08-08"
+  },
+  {
+    "uuid": "f0aedb33-1087-4ba2-83bf-f2913594af63",
+    "username": "Plarp",
+    "role": "Former Jr Moderator",
+    "date": "2021-08-24"
+  },
+  {
+    "uuid": "f36bdc4f-7dab-462b-87b6-dee2e3af8490",
+    "username": "_Stay",
+    "role": "Former Jr Moderator",
+    "date": "2021-08-26"
+  },
+  {
+    "uuid": "3212183c-3f64-4dc7-a4ba-12874f5cb612",
+    "username": "nicholxs",
+    "role": "Former Moderator",
+    "date": "2021-10-30"
+  },
+  {
+    "uuid": "efeb7ae9-240b-4a96-89dc-cf066f8e26e3",
+    "username": "ajgore",
+    "role": "Former Jr Moderator",
+    "date": "2022-01-14"
+  },
+  {
+    "uuid": "1e2d933f-83b7-406a-81a8-c669eb032646",
+    "username": "lotix",
+    "role": "Former Jr Moderator",
+    "date": "2022-01-14"
+  },
+  {
+    "uuid": "dfbd94db-7839-4ee8-be7f-9e70bf9fd563",
+    "username": "swerve1",
+    "role": "Former Moderator",
+    "date": "2022-02-15"
+  },
+  {
+    "uuid": "1d58ff0c-1573-4b37-82eb-7d77217d824a",
+    "username": "NoiceM8",
+    "role": "Former Moderator",
+    "date": "2022-03-04"
+  },
+  {
+    "uuid": "a7c90607-783c-4341-9f20-e02bb1ba9a41",
+    "username": "Unburnable",
+    "role": "Former Senior Moderator",
+    "date": "2022-03-04"
+  },
+  {
+    "uuid": "c50d0df4-8bb2-49ec-ac75-8ecd2470d5a8",
+    "username": "swiirs",
+    "role": "Former Moderator",
+    "date": "2022-03-28"
+  },
+  {
+    "uuid": "f846db63-3df5-4e81-9dd3-7bb05027fdfb",
+    "username": "TheBestGamer",
+    "role": [
+      "Former Senior Moderator",
+      "Former Map Developer"
+    ],
+    "date": "2022-04-25"
+  },
+  {
+    "uuid": "4f0ac4d7-4776-4400-9283-6bf4a5bcd48f",
+    "username": "Virus53",
+    "role": [
+      "Former Moderator",
+      "Former Events"
+    ],
+    "date": "2022-05-07"
+  },
+  {
+    "uuid": "4f0ac4d7-4776-4400-9283-6bf4a5bcd48f",
+    "username": "_NotMaria",
+    "role": "Former Moderator",
+    "date": "2022-07-19"
+  },
+  {
+    "uuid": "edbd4cdb-63a5-4cec-944c-2b6bda56f51f",
+    "username": "Owehttamy",
+    "role": "Former Map Developer",
+    "date": "2022-07-28"
+  },
+  {
+    "uuid": "1f2ae163-b1d9-45b8-8ef0-e2b98cdbef21",
+    "username": "Houlton",
+    "role": "Former Moderator",
+    "date": "2022-08-23"
+  },
+  {
+    "uuid": "8dae23df-a462-471e-bd83-61a23e2ac9e7",
+    "username": "DeadlyTrap",
+    "role": "Former Moderator",
+    "date": "2022-08-31"
+  },
+  {
+    "uuid": "72f1f840-f7f7-43e9-832a-025e03123e48",
+    "username": "mybeary",
+    "role": [
+      "Former Senior Moderator",
+      "Former Map Developer",
+      "Former Events"
+    ],
+    "date": "2022-11-30"
+  },
+  {
+    "uuid": "e94b8630-757a-428c-92ff-50079ffa396d",
+    "username": "phantomrope",
+    "role": "Former Moderator",
+    "date": "2022-12-07"
+  },
+  {
+    "uuid": "53c7e46f-092a-4fc6-9721-54e60a97f09f",
+    "username": "Fishywishi",
+    "role": "Former Events",
+    "date": "2022-11-28"
+  }
+]
