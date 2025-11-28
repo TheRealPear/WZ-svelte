@@ -1,13 +1,15 @@
 <svelte:head>
-  <title>Server Rules</title> 
+  <title>Server Rules</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl prose [&_h1]:my-3 [&_h2]:my-3 [&_hr]:my-3">
-  <h1 class="text-3xl">Server Rules</h1>
-  <p class="font-bold">This page was last updated on July 28th, 2022.</p>
-  <p>Failure to abide by any of the rules listed on this page may result in a punishment for your Minecraft or Discord account. If you have any questions about a rule, please contact a staff member on our Discord server for more information.</p>
-  <p>These rules are subject to change at any time, with or without notice. It is your responsibility to keep up-to-date with the rules.</p>
-  <hr/>
+<div class="mx-auto max-sm:m-4 max-w-4xl prose [&_h1]:my-3 [&_h2]:my-3">
+  <hgroup>
+    <h1 class="text-3xl">Server Rules</h1>
+    <p class="font-bold">This page was last updated on July 28th, 2022.</p>
+    <p>Failure to abide by any of the rules listed on this page may result in a punishment for your Minecraft or Discord account. If you have any questions about a rule, please contact a staff member on our Discord server for more information.</p>
+    <p>These rules are subject to change at any time, with or without notice. It is your responsibility to keep up-to-date with the rules.</p>
+  </hgroup>
+  <div class="divider"></div>
   <h2 class="text-2xl">General Composure</h2>
   <ol>
     <li>Use and practice common sense. If it sounds questionable or excessive, it's probably not allowed. Consult with one of our staff members for rules or behavior not listed on this page.</li>
@@ -55,6 +57,6 @@
     <li>Forging or faking evidence when appealing or submitting a report will result in an instant denial. A punishment might follow depending on the severity of the offense.</li>
     <li>When reporting a player, make sure to do so with sufficient evidence. Joke reports may be deleted and will likely lead to a ban on the forums.</li>
   </ol>
-  <hr/>
+  <div class="divider"></div>
   <p>Please note that if you are IP banned in-game or on our Discord server, all users associated with that IP address will also be banned.</p>
 </div>

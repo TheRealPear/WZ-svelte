@@ -47,11 +47,12 @@
   <title>Staff</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl prose [&_h1]:my-3 [&_h2]:my-3 [&_hr]:my-3">
-  <h1 class="text-3xl">Staff</h1>
-  <p>The people who help keep the server running.</p>
-  <hr />
-
+<div class="mx-auto max-sm:m-4 max-w-4xl [&_h1]:my-3 [&_h2]:my-3 [&_hr]:my-3">
+  <hgroup>
+    <h1 class="text-3xl font-extrabold">Staff</h1>
+    <p class="text-base-content/90">The people who help keep the server running.</p>
+  </hgroup>
+  <div class="divider"></div>
   {#if loading}
     <div class="text-center">
       <span class="loading loading-spinner loading-xl text-primary"></span>
@@ -65,16 +66,17 @@
         <div class="card bg-base-100 shadow-sm">
           <div class="card-body">
             <h2 class="card-title">
-              {rank.displayName}
+              <span class="text-2xl font-bold">{rank.displayName}</span>
               <span class="text-sm font-normal text-base-content/70">({staffPlayers[rank._id]?.length || 0})</span>
             </h2>
             {#if staffPlayers[rank._id] && staffPlayers[rank._id].length > 0}
-              <div class="space-y-1">
+              <div class="grid grid-cols-2 space-y-6 max-sm:grid-cols-1">
+                <!-- Avatar & username are grouped together -->
                 {#each staffPlayers[rank._id] as entry}
-                  <div class="flex items-center gap-2">
+                  <a class="flex items-center gap-2" href="/p/{entry.name}">
                     <img class="size-16 rounded flex-shrink-0 shadow-md/20" src="https://minotar.net/helm/{entry.id}.svg" alt="" loading="lazy"/>
-                    <a class="text-lg font-semibold no-underline hover:underline" href="/p/{entry.name}">{entry.name}</a>
-                  </div>
+                    <p class="text-lg font-semibold no-underline hover:underline">{entry.name}</p>
+                  </a>
                 {/each}
               </div>
             {:else}

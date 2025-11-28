@@ -1,13 +1,15 @@
 <svelte:head>
-  <title>Screenshare Policy</title> 
+  <title>Screenshare Policy</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl prose [&_h1]:my-3 [&_h2]:my-3 [&_hr]:my-3">
-  <h1 class="text-3xl">Screenshare Policy</h1>
-  <p class="font-bold">This page was last updated on July 15th, 2021.</p>
-  <p>In an effort to combat cheating, Warzone is utilising 'screensharing.' Screensharing is the process of scanning and searching through a suspected cheater's computer in order to detect client modifications that violate Warzone's rules.</p>
-  <p>Our Screenshare Policy may be updated at any time, with or without notice. It is your responsibility to keep up-to-date with the content on this page.</p>
-  <hr/>
+<div class="mx-auto max-sm:m-4 max-w-4xl prose [&_h1]:my-3 [&_h2]:my-3">
+  <hgroup>
+    <h1 class="text-3xl">Screenshare Policy</h1>
+    <p class="font-bold">This page was last updated on July 15th, 2021.</p>
+    <p>In an effort to combat cheating, Warzone is utilising 'screensharing.' Screensharing is the process of scanning and searching through a suspected cheater's computer in order to detect client modifications that violate Warzone's rules.</p>
+    <p>Our Screenshare Policy may be updated at any time, with or without notice. It is your responsibility to keep up-to-date with the content on this page.</p>
+  </hgroup>
+  <div class="divider"></div>
   <h2 class="text-2xl">Privacy Statement</h2>
   <p>Player privacy is prioritised during a screenshare. Staff members conducting screenshares will not look for any information that does not pertain to cheat detection. That being said, Warzone does not guarantee sensitive information will not be encountered in the screenshare process. Players are expected to make sure that sensitive information is not stored in any folders that are related to Minecraft or similar. In the event that sensitive information is discovered, it will be kept private within the screenshare & senior staff.</p>
   <p>If a player requires any clarification about programs or methods during a screenshare, the screenshare will be paused and questions will be answered. Players may request to pause or stop the screenshare at any time.</p>
