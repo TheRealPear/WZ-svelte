@@ -5,7 +5,8 @@
   // Developer
   // Map Developer -> Head Map Developer
   // Events -> Head of Events
-// Applicants who failed their probationary phase are not counted as staff and therefore will not be listed here.
+  // Advisor
+// Applicants who failed their probationary phase are not counted as staff and will not be listed here.
 // Former staff who were demoted for extraordinary reasons will also not be listed here.
 [
   {
@@ -170,6 +171,12 @@
     "date": "2019-10-27"
   },
   {
+    "uuid": "dfacf568-6110-4362-809c-6c59c1eb6391",
+    "username": "_Rascal",
+    "role": "Former Moderator",
+    "date": "2021-02-27"
+  },
+  {
     "uuid": "0460ca95-02de-4e85-9d92-41e5ae518e47",
     "username": "_Gingey_",
     "role": "Former Senior Moderator",
@@ -209,7 +216,7 @@
     "date": "2021-07-18"
   },
   {
-    "uuid": "", // unknown uuid
+    "uuid": "8389ea76-781e-48ce-b13a-8605d985fb9b",
     "username": "Ben87",
     "role": "Former Events",
     "date": "2021-07-23"
@@ -239,6 +246,12 @@
     "date": "2021-10-30"
   },
   {
+    "uuid": "c7631131-30fe-4d64-adee-adaa2ac089de",
+    "username": "orangle",
+    "role": "Former Events",
+    "date": "2022-01-13"
+  },
+  {
     "uuid": "efeb7ae9-240b-4a96-89dc-cf066f8e26e3",
     "username": "ajgore",
     "role": "Former Jr Moderator",
@@ -251,9 +264,21 @@
     "date": "2022-01-14"
   },
   {
+    "uuid": "f5d5c301-9ad3-4cb4-9cfd-a6b78e67734a",
+    "username": "Flashee",
+    "role": [
+      "Former Map Developer",
+      "Former Advisor"
+    ],
+    "date": "2022-01-24"
+  },
+  {
     "uuid": "dfbd94db-7839-4ee8-be7f-9e70bf9fd563",
     "username": "swerve1",
-    "role": "Former Moderator",
+    "role": [
+      "Former Moderator",
+      "Former Events"
+    ],
     "date": "2022-02-15"
   },
   {
@@ -317,6 +342,18 @@
     "date": "2022-08-31"
   },
   {
+    "uuid": "1455875f-7c59-4194-a03b-e41e3c84d0c1",
+    "username": "abduh",
+    "role": "Former Moderator",
+    "date": "2022-11-29"
+  },
+  {
+    "uuid": "53c7e46f-092a-4fc6-9721-54e60a97f09f",
+    "username": "Fishywishi",
+    "role": "Former Events",
+    "date": "2022-11-28"
+  },
+  {
     "uuid": "72f1f840-f7f7-43e9-832a-025e03123e48",
     "username": "mybeary",
     "role": [
@@ -331,11 +368,5 @@
     "username": "phantomrope",
     "role": "Former Moderator",
     "date": "2022-12-07"
-  },
-  {
-    "uuid": "53c7e46f-092a-4fc6-9721-54e60a97f09f",
-    "username": "Fishywishi",
-    "role": "Former Events",
-    "date": "2022-11-28"
   }
 ]
