@@ -2,6 +2,9 @@
   import type { PageData } from './$types';
   import { formatDate, formatDateSimplified, formatHours } from '$lib/scripts/date';
   import { calculateLevel, formatXPProgress } from '$lib/scripts/pgm';
+  import { rankName, rankPriority, rankColor, loadRanks } from '$lib/scripts/ranks';
+  import { onMount } from 'svelte';
+
   export let data: PageData;
 
   const player = (data.player ?? {}) as any;
@@ -9,6 +12,7 @@
   const name = (player.name as string) ?? 'Unknown';
   const firstJoinMs = (player.firstJoinedAt as number) ?? 1419033600000;
   const lastJoinMs = (player.lastJoinedAt as number) ?? 1419033600000;
+  const rankIds: string[] = player.rankIds ?? [];
   const stats = (player.stats ?? {}) as Record<string, any>;
   const exp = (stats.xp ?? 0) as number;
   const playTime = (stats.gamePlaytime ?? 0) as number;
@@ -18,6 +22,32 @@
   const losses = (stats.losses ?? 0) as number;
   const ties = (stats.ties ?? 0) as number;
   const matches = (stats.matches ?? 0) as number;
+
+  type ResolvedRank = {
+    name: string;
+    priority: number;
+    color?: string;
+  };
+
+  let resolvedRanks: ResolvedRank[] = [];
+
+  onMount(async () => {
+    await loadRanks();
+    const removeDuplicate = new Set<string>();
+    resolvedRanks = rankIds
+      .map(id => ({
+        name: rankName(id)!,
+        priority: rankPriority(id)!,
+        color: rankColor(id)
+      }))
+      .filter(r => {
+        if (!r.name || r.priority === null) return false;
+        if (removeDuplicate.has(r.name)) return false;
+        removeDuplicate.add(r.name);
+        return true;
+      })
+      .sort((a, b) => b.priority - a.priority);
+  });
 </script>
 
 <svelte:head>
@@ -38,10 +68,13 @@
           <div class="flex flex-col items-start space-y-2">
             <div class="text-3xl">{name}</div>
             <!-- Rank badges -->
+            {#if resolvedRanks.length > 0}<!-- Prevent gap below username when there's no ranks -->
             <div class="flex gap-1">
-              <div class="badge badge-lg badge-primary">Rank</div>
-              <div class="badge badge-lg badge-secondary">Rank</div>
+              {#each resolvedRanks as rank}
+              <div class="badge badge-lg {rank.color}">{rank.name}</div>
+              {/each}
             </div>
+            {/if}
           </div>
           <!-- Right column -->
           <div class="flex flex-col justify-self-end items-center space-y-1">

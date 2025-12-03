@@ -1,14 +1,10 @@
-// List of former Warzone staff
-// Some staff may have multiple tenures. Use the most recent for the date field.
-// If someone held multiple ranks, you can make an array. Their highest rank must be listed first.
-  // Junior Moderator -> Moderator -> Senior Moderator -> Administrator
-  // Developer
-  // Map Developer -> Head Map Developer
-  // Events -> Head of Events
-  // Advisor
-// Applicants who failed their probationary phase are not counted as staff and will not be listed here.
-// Former staff who were demoted for extraordinary reasons will also not be listed here.
 [
+  {
+    "uuid": "2dc9b2a1-6063-499b-9685-aa97b978707a",
+    "username": "Luuke",
+    "role": "Former Administrator",
+    "date": "2017-09-03"
+  },
   {
     "uuid": "c5772145-2c33-49e6-8729-cef7cc20f0cc",
     "username": "Disastur",
@@ -22,7 +18,7 @@
     "date": "2018-02-10"
   },
   {
-    "uuid": "400cc2c9-a23c-4a48-b4b4-e9bde6caefc6", // verify if account correct
+    "uuid": "400cc2c9-a23c-4a48-b4b4-e9bde6caefc6",
     "username": "crumbface",
     "role": "Former Moderator",
     "date": "2018-02-10"
@@ -30,13 +26,13 @@
   {
     "uuid": "b149f1ae-3a31-45a7-a521-56c92ebbb282",
     "username": "Blue_Monkey_12",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2018-03-05"
   },
   {
-    "uuid": "25ad12ce-529f-4063-8ca6-89d6fde97c06", // verify if account correct
+    "uuid": "25ad12ce-529f-4063-8ca6-89d6fde97c06",
     "username": "Cryor",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2018-03-12"
   },
   {
@@ -77,7 +73,7 @@
     "date": "2018-05-19"
   },
   {
-    "uuid": "6fd9815b-d3c0-44f3-8f86-a603a49b65fc", // verify if account correct
+    "uuid": "6fd9815b-d3c0-44f3-8f86-a603a49b65fc",
     "username": "LightningStrike",
     "role": "Former Moderator",
     "date": "2018-05-19"
@@ -89,9 +85,9 @@
     "date": "2018-05-20"
   },
   {
-    "uuid": "5e280db7-0ca5-457d-8222-63e6fcbf42dd", // verify if account correct
+    "uuid": "5e280db7-0ca5-457d-8222-63e6fcbf42dd",
     "username": "5N1",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2018-09-13"
   },
   {
@@ -104,7 +100,7 @@
   {
     "uuid": "8918bebc-c3ff-4047-99cc-7d6adf644ad6",
     "username": "DylanDownUnder",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2018-09-30"
   },
   {
@@ -114,13 +110,13 @@
     "date": "2018-09-30"
   },
   {
-    "uuid": "", // unknown uuid
+    "uuid": "3272bc57-ea5e-4014-b77f-043b24800c94",
     "username": "Kaece",
     "role": "Former Moderator",
     "date": "2018-10-15"
   },
   {
-    "uuid": "", // unknown uuid
+    "uuid": "c54a0bc8-1103-46aa-81b5-df90dafac887",
     "username": "Vinixs",
     "role": "Former Moderator",
     "date": "2019-05-16"
@@ -165,10 +161,28 @@
     "date": "2019-09-04"
   },
   {
+    "uuid": "db3e4ab9-7c34-4342-8aca-63db60ec8d1b",
+    "username": "slees",
+    "role": "Former Senior Moderator",
+    "date": "2019-09-11"
+  },
+  {
     "uuid": "fe7eae77-c372-47b6-bf41-fd69d9981362",
     "username": "Ninventoo",
     "role": "Former Moderator",
     "date": "2019-10-27"
+  },
+  {
+    "uuid": "649ddc08-5406-4d15-83ab-c00974a7fee7",
+    "username": "MrScopes",
+    "role": "Former Moderator",
+    "date": "2019-12-10"
+  },
+  {
+    "uuid": "2bc61744-2eb5-4f7e-af81-e50abe836d47",
+    "username": "ckiee",
+    "role": "Former Developer",
+    "date": "2021-01-24"
   },
   {
     "uuid": "dfacf568-6110-4362-809c-6c59c1eb6391",
@@ -199,14 +213,15 @@
     "username": "__BT",
     "role": [
       "Former Senior Moderator",
-      "Former Map Developer"
+      "Former Map Developer",
+      "Former Events"
     ],
     "date": "2021-05-25"
   },
   {
     "uuid": "c78d4660-635a-417c-ad28-b432b6804f6b",
     "username": "Pndq",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2021-06-18"
   },
   {
@@ -230,13 +245,13 @@
   {
     "uuid": "f0aedb33-1087-4ba2-83bf-f2913594af63",
     "username": "Plarp",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2021-08-24"
   },
   {
     "uuid": "f36bdc4f-7dab-462b-87b6-dee2e3af8490",
     "username": "_Stay",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2021-08-26"
   },
   {
@@ -254,13 +269,13 @@
   {
     "uuid": "efeb7ae9-240b-4a96-89dc-cf066f8e26e3",
     "username": "ajgore",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2022-01-14"
   },
   {
     "uuid": "1e2d933f-83b7-406a-81a8-c669eb032646",
     "username": "lotix",
-    "role": "Former Jr Moderator",
+    "role": "Former Junior Moderator",
     "date": "2022-01-14"
   },
   {
@@ -318,7 +333,7 @@
     "date": "2022-05-07"
   },
   {
-    "uuid": "4f0ac4d7-4776-4400-9283-6bf4a5bcd48f",
+    "uuid": "d9efc01d-cd33-46c2-afe5-a6fc3f419f77",
     "username": "_NotMaria",
     "role": "Former Moderator",
     "date": "2022-07-19"
@@ -326,7 +341,10 @@
   {
     "uuid": "edbd4cdb-63a5-4cec-944c-2b6bda56f51f",
     "username": "Owehttamy",
-    "role": "Former Map Developer",
+    "role": [
+      "Former Map Developer",
+      "Former Moderator"
+    ],
     "date": "2022-07-28"
   },
   {

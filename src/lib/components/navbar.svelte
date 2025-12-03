@@ -1,19 +1,18 @@
 <script>
   import config from '$lib/config.json';
+  import navigation from '$lib//navigation.json';
 </script>
 
-<nav class="navbar bg-accent-100 shadow-sm">
+<nav class="navbar bg-base-200 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
       </div>
       <ul role="list" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a href="/">Home</a></li>
-        <li><a href="/leaderboard">Leaderboards</a></li>
-        <!-- <li><a href="/maps">Maps</a></li> -->
-        <li><a href="{config.STORE}">Store</a></li>
-        <li><a href="/staff">Staff</a></li>
+        {#each navigation as route}
+          <li><a href="{route.href}">{route.label}</a></li>
+        {/each}
       </ul>
     </div>
     <a class="btn btn-ghost text-xl" href="/">
@@ -23,11 +22,9 @@
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a href="/">Home</a></li>
-      <li><a href="/leaderboard">Leaderboards</a></li>
-      <!-- <li><a href="/maps">Maps</a></li> -->
-      <li><a href="{config.STORE}">Store</a></li>
-      <li><a href="/staff">Staff</a></li>
+      {#each navigation as route}
+        <li><a href="{route.href}">{route.label}</a></li>
+      {/each}
     </ul>
   </div>
   <div class="navbar-end">

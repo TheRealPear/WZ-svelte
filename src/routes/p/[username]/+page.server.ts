@@ -14,7 +14,7 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
     const res = await fetch(url);
 
     if (res.status === 404) {
-        throw error(404, 'Player not found');
+        throw error(404, 'Player not found. Please check the username and try again.');
     }
 
     if (!res.ok) {

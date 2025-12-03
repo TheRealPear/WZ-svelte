@@ -7,13 +7,9 @@
     "label": "Leaderboards",
     "href": "/leaderboard"
   },
-  // {
-  //   "label": "Maps",
-  //   "href": "/maps"
-  // },
   {
     "label": "Store",
-    "href": "store"
+    "href": "{config.STORE}"
   },
   {
     "label": "Staff",

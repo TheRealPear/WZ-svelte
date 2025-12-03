@@ -5,7 +5,44 @@
    themes: light --default;
 }
 
+/* Custom badge colors for ranks; not Minecraft color accurate for contrast */
+.badge-mcred {
+  --badge-color: #AA0000;
+  --badge-fg: white;
+}
+
+.badge-mcgold {
+  --badge-color: #d68f01;
+  --badge-fg: white;
+}
+
+.badge-mcaqua {
+  --badge-color: #00BAFE;
+  --badge-fg: white;
+}
+
+.badge-mcdarkaqua {
+  --badge-color: #00AAAA;
+  --badge-fg: white;
+}
+
+.badge-mcgreen {
+  --badge-color: #339B33;
+  --badge-fg: white;
+}
+
+.badge-mclightpurple {
+  --badge-color: #BE45BE;
+  --badge-fg: white;
+}
+
+.badge-mcblue {
+  --badge-color: #5555FF;
+  --badge-fg: white;
+}
+
+/* Custom text selection color */
 ::selection {
 	background-color: #5e178a;
-   color: white;
+  color: white;
 }

@@ -12,13 +12,28 @@
   let loading: boolean = true;
   let error: string | null = null;
 
+  const CACHE_KEY = 'leaderboardData';
+  const CACHE_TTL = 7200000; // 2 hours
+
   onMount(async () => {
     try {
+      const cached = sessionStorage.getItem(CACHE_KEY);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Date.now() - parsed.timestamp < CACHE_TTL) {
+          console.log('Using cached data');
+          leaderboardData = parsed.data;
+          loading = false;
+          return;
+        }
+      }
+
       const response = await fetch(config.API_BASE + '/mc/leaderboards/XP/ALL_TIME');
       const data: LeaderboardEntry[] = await response.json();
       // Uncomment below to debug
       // console.log('API Response:', data);
       leaderboardData = data;
+      sessionStorage.setItem(CACHE_KEY, JSON.stringify({ data, timestamp: Date.now() }));
     } catch (err) {
       error = 'Failed to load leaderboard data';
       console.error(err);

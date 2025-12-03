@@ -1,3 +1,7 @@
+<script>
+  import config from '$lib/config.json';
+</script>
+
 <style lang="css">
   /* Animate the Warzone logo */
   @-moz-keyframes spin {
@@ -24,20 +28,15 @@
   }
 </style>
 
-<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+<footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
   <aside>
     <img src="/img/warzone.svg" width="48" height="48" alt=""/>
-    <p class="font-bold">
-      &copy; {new Date().getUTCFullYear()} Warzone Network
-    </p>
+    <p class="font-bold">&copy; {new Date().getUTCFullYear()} {config.NAME} Network</p>
     <p>
-      Not an official Minecraft service.
-      <br />
+      Not an official Minecraft service.<br />
       Not approved by or associated with Mojang or Microsoft
     </p>
-    <p>
-      Originally made by <a class="link link-hover" target="_blank" rel="noreferrer" href="https://github.com/lukechatton">Luke Chatton</a> in 2014.
-    </p>
+    <p>Originally made by <a class="link link-hover" target="_blank" rel="noreferrer" href="https://github.com/lukechatton">Luke Chatton</a> in 2014.</p>
   </aside>
   <nav>
     <h6 class="footer-title">Site Map</h6>

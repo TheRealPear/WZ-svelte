@@ -5,7 +5,7 @@
 <header class="hero h-74 mx-auto bg-[url(/img/jumbotron-bg.webp)]">
   <div class="hero-overlay"><!-- Dummy div to make text readable --></div>
   <div class="hero-content text-center text-neutral-content flex flex-col">
-    <h1 class="text-5xl font-bold">We are Warzone</h1>
+    <h1 class="text-5xl font-bold">Warzone</h1>
     <!-- <p class="text-lg py-2">Take the objectives, destroy the enemy team, and dominate the competition!</p> -->
     <span class="text-rotate text-xl">
       <span class="justify-items-center">
