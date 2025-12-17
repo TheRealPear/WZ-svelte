@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import { gamemodes, getElapsedMatchTime, formatMatchTime } from '$lib/scripts/pgm';
+  import Clock from '~icons/heroicons/clock';
   export let data: PageData;
 
   const match = (data.match ?? {}) as any;
@@ -37,7 +38,10 @@
         </div>
         <!-- Right cell -->
         <div class="text-right space-y-1">
-          <p class="text-2xl text-gray-500">{formatMatchTime(getElapsedMatchTime(match))}</p>
+          <p class="inline-flex items-center text-2xl text-gray-500 gap-1">
+            <Clock class="size-6 leading-none" />
+            {formatMatchTime(getElapsedMatchTime(match))}
+          </p>
           <p class="text">{matchDate}</p>
         </div>
       </div>
@@ -46,9 +50,17 @@
   <!-- Participants -->
   <div class="card w-full shadow">
     <div class="card-body">
-      <h2 class="card-title">Participants</h2>
+      <!-- <h2 class="card-title">Participants</h2> -->
       <div class="overflow-x-auto">
         <table class="table w-full">
+          <thead>
+          <tr>
+            <th>Username</th>
+            {#if gameType !== 'Free For All'}<th>Team</th>{/if}
+            <th>Kills</th>
+            <th>Deaths</th>
+          </tr>
+        </thead>
           <tbody>
             {#each participants as entry}
               <tr class="hover:bg-base-300">
@@ -58,6 +70,9 @@
                     <a class="no-underline hover:underline" href="/p/{entry.name}">{entry.name}</a>
                   </div>
                 </td>
+                {#if gameType !== 'Free For All'}<td>{entry.lastPartyName}</td>{/if}
+                <td>{entry.stats.kills}</td>
+                <td>{entry.stats.deaths}</td>
               </tr>
             {/each}
           </tbody>

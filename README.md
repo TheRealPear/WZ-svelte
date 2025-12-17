@@ -1,38 +1,20 @@
-# sv
+# Warzone Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Warzone's website is powered by Svelte + SvelteKit as well as TailwindCSS + DaisyUI for styling. This ties in with our in-house [Mars API project](https://github.com/Warzone/mars-api-rs) to display detailed information such as individual players' statistics and match information.
 
-## Creating a project
+## Contributing
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Setup
 
-```bash
-# create a new project in the current directory
-npx sv create
+1. Set up the [Mars API](https://github.com/Warzone/mars-api-rs) and a (Sport)Paper server running [PGM](https://github.com/PGMDev/PGM) and [Mars client plugin](https://github.com/Warzone/mars) configured.
+2. Make sure to have the latest version of [Node.js LTS](https://nodejs.org/en/download) installed. Run `npm install` in the project's directory to install the dependencies.
+3. Modify `/src/lib/config.json` to your liking.
+4. Start the development server with `npm run dev`. You can also build with `npm run build`.
+    * Default server link is http://localhost:5173/
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Contributor Notes
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+* The site was not designed with self-hosting as the top priority. With that in mind, we've taken some steps to centralize important settings in the `config.json` file described in the setup guide.
+* This project uses [EditorConfig](https://editorconfig.org/) to standardize coding styles across files.
+    * We recommend installing the EditorConfig plugin for your preferred text editor. Some editors, including GitHub's online editor, already support it.
+* All contributions should follow American (US) English grammar rules and spelling.

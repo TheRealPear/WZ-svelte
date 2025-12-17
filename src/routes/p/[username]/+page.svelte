@@ -78,7 +78,7 @@
           </div>
           <!-- Right column -->
           <div class="flex flex-col justify-self-end items-center space-y-1">
-            <div class="font-normal text-base-content/70">Level</div>
+            <div class="font-normal text-base-content/60">Level</div>
             <div class="tooltip tooltip-left" data-tip="XP: {formatXPProgress(exp)}">
               <div class="text-4xl font-extrabold">{calculateLevel(exp)}</div>
             </div>

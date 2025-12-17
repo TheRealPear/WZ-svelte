@@ -1,5 +1,8 @@
-<script>
+<script lang="ts">
   import config from '$lib/config.json';
+  import Discord from 'virtual:icons/simple-icons/discord';
+  import Twitter from 'virtual:icons/simple-icons/twitter';
+  import GitHub from 'virtual:icons/simple-icons/github';
 </script>
 
 <style lang="css">
@@ -47,9 +50,9 @@
   </nav>
   <nav>
     <h6 class="footer-title">Useful Links</h6>
-    <a class="link link-hover" target="_blank" rel="noreferrer" href="https://warz.one/discord">Discord</a>
-    <a class="link link-hover" target="_blank" rel="noreferrer" href="https://twitter.com/WarzoneMC">Twitter</a>
-    <a class="link link-hover" target="_blank" rel="noreferrer" href="https://github.com/Warzone/">GitHub</a>
+    <a class="link link-hover" target="_blank" rel="noreferrer" href="https://warz.one/discord"><Discord class="inline-flex mr-1"/>Discord</a>
+    <a class="link link-hover" target="_blank" rel="noreferrer" href="https://twitter.com/WarzoneMC"><Twitter class="inline-flex mr-1"/>Twitter</a>
+    <a class="link link-hover" target="_blank" rel="noreferrer" href="https://github.com/Warzone/"><GitHub class="inline-flex mr-1"/>GitHub</a>
   </nav>
   <nav>
     <h6 class="footer-title">Legal</h6>

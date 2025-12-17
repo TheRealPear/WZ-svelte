@@ -22,14 +22,14 @@
 
 <div class="mx-auto max-sm:m-4 max-w-4xl prose text-center [&_h1]:my-3 [&_h2]:my-3">
   <section>
-    <h1 class="text-3xl">Our Story</h1>
+    <h2 class="text-3xl font-extrabold">Our Story</h2>
     <p>Warzone was founded on December 20, 2014, by Luuke, just a month after launching Minehut. Created as a team-oriented PvP server, it quickly became a home for both casual players and competitive communities. We are proud to remain one of the oldest independent Minehut communities.</p>
     <p>Today, Warzone offers a constantly evolving library of more than a thousand maps across ten gamemodes. With a dynamic map pool and voting system, every match adapts to player activity, keeping gameplay fresh, balanced, and exciting.</p>
   </section>
   <section>
-    <h1 class="text-3xl">Why Warzone?</h1>
+    <h2 class="text-3xl font-extrabold">Why Warzone?</h2>
     <!-- Cards -->
-    <div class="mt-4 flex flex-col md:flex-row mx-auto gap-8">
+    <div class="not-prose mt-4 flex flex-col md:flex-row mx-auto gap-8">
       <div class="card bg-base-100 w-84 shadow-sm">
         <figure>
           <img src="/img/fg-open.webp" alt=""/>
@@ -41,26 +41,26 @@
       </div>
       <div class="card bg-base-100 w-84 shadow-sm">
         <figure>
-          <img src="/img/fg-match.webp" alt="Shoes" />
+          <img src="/img/fg-match.webp" alt=""/>
         </figure>
         <div class="card-body items-center text-center">
-          <h2 class="card-title">Match Details</h2>
-          <p>Relive past matches with our detailed match tracking.</p>
+          <h2 class="card-title">Comprehensive Stats</h2>
+          <p>K/D, W/R, and more with full match tracking. All in one place.</p>
         </div>
       </div>
       <div class="card bg-base-100 w-84 shadow-sm">
         <figure>
-          <img src="/img/fg-player.webp" alt="Shoes" />
+          <img src="/img/fg-player.webp" alt=""/>
         </figure>
         <div class="card-body items-center text-center">
-          <h2 class="card-title">Player Stats</h2>
-          <p>Comprehensive player stats that includes kill/death and win/loss ratio.</p>
+          <h2 class="card-title">Open Source</h2>
+          <p>Every part of Warzone is driven by community contributions.</p>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <h1 class="text-3xl">Start Playing!</h1>
+    <h2 class="text-3xl font-extrabold">Start Playing!</h2>
     <p>Warzone is open to all Minecraft: Java Edition players from version 1.7 through the latest release. Bedrock Edition players can join too, with limited support available through the Minehut proxy.</p>
     <div class="mt-4 flex flex-col md:flex-row gap-4 items-center justify-center">
       <div class="tooltip tooltip-bottom" data-tip="Click to copy">

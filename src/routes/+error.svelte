@@ -1,5 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
+  import ArrowLeft from 'virtual:icons/heroicons/arrow-left';
+  import Home from 'virtual:icons/heroicons/home';
 
   function goBack() {
     history.back();
@@ -15,8 +17,8 @@
     <h2 class="card-title text-4xl">Error {page.status}</h2>
     <p>{page.error.message}</p>
     <div class="card-actions mt-6 justify-end">
-      <button class="btn btn-ghost" type="button" onclick={goBack}>Go back</button>
-      <a href="/" class="btn btn-primary">Go Home</a>
+      <button class="btn btn-ghost" type="button" onclick={goBack}><ArrowLeft />Go back</button>
+      <a href="/" class="btn btn-primary"><Home />Go Home</a>
     </div>
   </div>
 </div>

@@ -16,7 +16,7 @@ const XP_CONFIGS = {
 
 const XP_CONFIG = XP_CONFIGS.power; // Set only the last part to switch formulas
 
-function calculateLevel(exp: number): number {
+export function calculateLevel(exp: number): number {
   if (XP_CONFIG.type === "linear") {
     return Math.floor((exp + XP_CONFIG.step) / XP_CONFIG.step);
   } else if (XP_CONFIG.type === "power") {
@@ -32,7 +32,7 @@ function getExpForLevel(level: number): number {
   }
 }
 
-function formatXPProgress(exp: number): string {
+export function formatXPProgress(exp: number): string {
   const level = calculateLevel(exp);
 
   let prevLevelXP: number;
@@ -53,7 +53,7 @@ function formatXPProgress(exp: number): string {
 }
 
 // Gamemodes
-const gamemodes = {
+export const gamemodes = {
   "ARCADE": "Arcade",
   "ATTACK_DEFEND": "Attack/Defend",
   "BEDWARS": "Bed Wars",
@@ -81,7 +81,7 @@ const gamemodes = {
   "SURVIVAL_GAMES": "Survival Games"
 };
 
-const gamemodes_short = {
+export const gamemodes_short = {
   "ARCADE": "Arcade",
   "ATTACK_DEFEND": "A/D",
   "BEDWARS": "BW",
@@ -110,7 +110,7 @@ const gamemodes_short = {
 };
 
 // Match times
-function getElapsedMatchTime(match) {
+export function getElapsedMatchTime(match) {
 	const { startedAt, endedAt } = match;
 	let timeElapsed;
 	if (!endedAt) {
@@ -130,7 +130,7 @@ function getElapsedMatchTime(match) {
 	return timeElapsed;
 }
 
-function formatMatchTime(ms) {
+export function formatMatchTime(ms: number) {
 	let seconds = Math.floor((ms / 1000) % 60);
 	let minutes = Math.floor((ms / (1000 * 60)) % 60);
 	let hours = Math.floor(ms / (1000 * 60 * 60));
@@ -149,7 +149,7 @@ function formatMatchTime(ms) {
 }
 
 // Colors
-function getStatusColor(match) {
+export function getStatusColor(match) {
 	const { loadedAt, startedAt, endedAt } = match;
 	if (loadedAt && !startedAt && !endedAt) {
 		return ''; // Loaded
@@ -162,7 +162,7 @@ function getStatusColor(match) {
 	}
 }
 
-function minecraftColorToHex(minecraftColor) {
+export function minecraftColorToHex(minecraftColor: string) {
   const colorMap = {
     'BLACK': '#000000',
     'DARK_BLUE': '#0000AA',
@@ -186,5 +186,3 @@ function minecraftColorToHex(minecraftColor) {
 
   return colorMap[upperCaseColor] || "#FFFFFF";
 }
-
-export { calculateLevel, formatXPProgress, gamemodes, gamemodes_short, formatMatchTime, getStatusColor, getElapsedMatchTime, minecraftColorToHex };
