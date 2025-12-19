@@ -44,7 +44,7 @@
   <title>Maps</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl w-full [&_h1]:my-3">
+<div class="mx-auto max-w-4xl w-full [&_h1]:my-3">
   <hgroup>
     <h1 class="text-3xl font-extrabold">Maps</h1>
     <p class="text-base-content/90">View the expansive collection of maps currently available on Warzone.</p>
@@ -63,7 +63,7 @@
     <div class="hover-3d">
       <div class="card shadow image-full">
         <figure>
-          <img class="object-cover" src="/img/map-fallback.png" alt="" loading="lazy"/>
+          <img class="object-cover" src={`https://raw.githubusercontent.com/TBG1000/MapImages/refs/heads/main/Maps/${map.name}/map.png`} alt="" loading="lazy" on:error={(e) => { const img = e.target as HTMLImageElement; img.onerror = null; img.src = '/img/map-fallback.png'; }}/>
         </figure>
         <div class="card-body justify-start h-2/5 bg-gradient-to-b from-neutral/60 to-transparent">
           <h2 class="card-title font-bold">{map.name}</h2>
@@ -80,6 +80,6 @@
       <div></div>
     </div>
     {/each}
-</div>
+  </div>
 {/if}
 </div>

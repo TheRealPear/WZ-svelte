@@ -66,7 +66,7 @@
   <title>Retired Staff</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl [&_h1]:my-3">
+<div class="mx-auto max-w-5xl [&_h1]:my-3">
   <hgroup>
     <h1 class="text-3xl font-extrabold">Retired Staff</h1>
     <div class="space-y-4">

@@ -47,7 +47,7 @@
   <title>Leaderboard</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl w-full [&_h1]:my-3 [&_h2]:my-3 [&_hr]:my-3">
+<div class="mx-auto max-w-5xl w-full [&_h1]:my-3 [&_hr]:my-3">
   <hgroup>
     <h1 class="text-3xl font-extrabold">Leaderboard</h1>
     <p class="text-base-content/90">The highest ranked players on Warzone.</p>

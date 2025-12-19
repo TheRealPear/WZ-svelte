@@ -8,7 +8,7 @@
 
   // Map name and gamemode
   const mapName = match.level.name ?? 'Unknown';
-  const gameType = gamemodes[match.level.gamemodes[0]] ?? 'Unknown';
+  const gameType = gamemodes[match.level.gamemodes[0] as keyof typeof gamemodes] ?? 'Unknown';
 
   // Format match date for display
   var dateOptions = {
@@ -26,7 +26,7 @@
   <title>Match Results</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl w-full space-y-4">
+<div class="mx-auto max-w-5xl w-full space-y-4">
   <!-- Basic match details -->
   <div class="card w-full shadow">
     <div class="card-body">

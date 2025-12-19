@@ -2,7 +2,7 @@
   <title>Privacy Policy</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl prose [&_h1]:my-3 [&_h2]:my-3">
+<div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
   <hgroup>
     <h1 class="text-3xl">Privacy Policy</h1>
     <p class="font-bold">This page was last updated on July 23rd, 2022 (updated policy regarding inventory data).</p>

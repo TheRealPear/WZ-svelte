@@ -2,7 +2,7 @@
   <title>Server Rules</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl prose [&_h1]:my-3 [&_h2]:my-3">
+<div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
   <hgroup>
     <h1 class="text-3xl">Server Rules</h1>
     <p class="font-bold">This page was last updated on July 28th, 2022.</p>

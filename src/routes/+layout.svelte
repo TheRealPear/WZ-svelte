@@ -9,7 +9,7 @@
 
 <div class="min-h-screen flex flex-col">
   <Navbar />
-  <main class="flex-grow {$page.url.pathname === '/' ? 'pb-8' : 'px-4 py-8'}">
+  <main class="flex-grow {$page.url.pathname === '/' ? 'pb-8' : 'px-4 py-6'}">
     {@render children()}
   </main>
   <Footer />

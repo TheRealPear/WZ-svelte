@@ -54,22 +54,22 @@
   <title>{name}</title>
 </svelte:head>
 
-<div class="mx-auto max-sm:m-4 max-w-4xl w-full">
+<div class="mx-auto max-w-5xl w-full">
   <!-- User info card -->
   <div class="card w-full shadow">
     <div class="card-body">
       <h1 class="card-title">
-        <div class="grid grid-cols-[auto_1fr_auto] gap-x-6 items-center w-full">
+        <div class="grid grid-col-1 md:grid-cols-[auto_1fr_auto] gap-x-6 max-sm:gap-y-2 items-center w-full">
           <!-- Left column -->
-          <div>
+          <div class="max-sm:grid max-sm:justify-center">
             <img class="size-24 rounded flex-shrink-0 shadow-lg/20" alt="" src={"https://minotar.net/helm/" + id + ".svg"}/>
           </div>
           <!-- Middle column -->
-          <div class="flex flex-col items-start space-y-2">
-            <div class="text-3xl">{name}</div>
+          <div class="flex flex-col space-y-2">
+            <div class="max-sm:flex max-sm:justify-center text-3xl">{name}</div>
             <!-- Rank badges -->
             {#if resolvedRanks.length > 0}<!-- Prevent gap below username when there's no ranks -->
-            <div class="flex gap-1">
+            <div class="flex flex-wrap items-center gap-1 max-sm:flex-col max-sm:items-center">
               {#each resolvedRanks as rank}
               <div class="badge badge-lg {rank.color}">{rank.name}</div>
               {/each}
@@ -77,7 +77,7 @@
             {/if}
           </div>
           <!-- Right column -->
-          <div class="flex flex-col justify-self-end items-center space-y-1">
+          <div class="flex flex-col sm:justify-self-end items-center space-y-1">
             <div class="font-normal text-base-content/60">Level</div>
             <div class="tooltip tooltip-left" data-tip="XP: {formatXPProgress(exp)}">
               <div class="text-4xl font-extrabold">{calculateLevel(exp)}</div>
