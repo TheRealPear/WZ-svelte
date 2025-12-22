@@ -163,7 +163,7 @@ export function getStatusColor(match) {
 }
 
 export function minecraftColorToHex(minecraftColor: string) {
-  const colorMap = {
+  const colorMap: Record<string, string> = {
     'BLACK': '#000000',
     'DARK_BLUE': '#0000AA',
     'DARK_GREEN': '#00AA00',

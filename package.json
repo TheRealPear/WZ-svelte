@@ -28,7 +28,7 @@
         "@tailwindcss/vite": "^4.1.18",
         "daisyui": "^5.5.14",
         "svelte": "^5.46.0",
-        "svelte-check": "^4.3.4",
+        "svelte-check": "^4.3.5",
         "tailwindcss": "^4.1.18",
         "typescript": "^5.9.3",
         "unplugin-icons": "^22.5.0",

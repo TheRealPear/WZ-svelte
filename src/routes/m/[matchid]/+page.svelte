@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import { gamemodes, getElapsedMatchTime, formatMatchTime } from '$lib/scripts/pgm';
-  import Clock from '~icons/heroicons/clock';
+  import Clock from 'virtual:icons/heroicons/clock';
   export let data: PageData;
 
   const match = (data.match ?? {}) as any;
@@ -19,7 +19,7 @@
     minute: 'numeric'
   };
   const matchDate = new Date(match.loadedAt).toLocaleDateString('en-US', dateOptions as any) ?? 'Unknown';
-  const participants = Object.values(match.participants);
+  const participants = Object.values(match.participants) as any[];
 </script>
 
 <svelte:head>
@@ -38,7 +38,7 @@
         </div>
         <!-- Right cell -->
         <div class="text-right space-y-1">
-          <p class="inline-flex items-center text-2xl text-gray-500 gap-1">
+          <p class="inline-flex items-center text-2xl text-neutral gap-1">
             <Clock class="size-6 leading-none" />
             {formatMatchTime(getElapsedMatchTime(match))}
           </p>

@@ -1,4 +1,5 @@
 import config from '$lib/config.json';
+
 import Home from 'virtual:icons/heroicons/home';
 import NumberedList from 'virtual:icons/heroicons/numbered-list';
 // import Map from 'virtual:icons/heroicons/map';
