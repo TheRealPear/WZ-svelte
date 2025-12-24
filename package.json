@@ -27,7 +27,7 @@
         "@tailwindcss/typography": "^0.5.19",
         "@tailwindcss/vite": "^4.1.18",
         "daisyui": "^5.5.14",
-        "svelte": "^5.46.0",
+        "svelte": "^5.46.1",
         "svelte-check": "^4.3.5",
         "tailwindcss": "^4.1.18",
         "typescript": "^5.9.3",

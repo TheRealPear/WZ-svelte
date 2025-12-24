@@ -39,6 +39,7 @@
     description?: string;
     unlocked: boolean;
     completionTime?: number | null;
+    firstToUnlock?: boolean;
   };
 
   // List of all achievements
@@ -177,14 +178,21 @@
                   <div class="text-base-content/80">{ach.description ?? 'No description available.'}</div>
                 </td>
                 <td class="text-right">
-                  <div class="font-semibold">{ach.unlocked ? 'Unlocked' : 'Locked'}</div>
-                  {#if ach.unlocked && ach.completionTime}
-                    <div class="tooltip tooltip-left" data-tip="{formatDate(ach.completionTime)}">
-                      {formatDateSimplified(ach.completionTime)}
+                  <div class="flex justify-end gap-3 max-sm:flex-col max-sm:items-end items-center">
+                    {#if ach.firstToUnlock}
+                      <div class="badge badge-neutral badge-soft max-sm:badge-sm whitespace-nowrap">First Unlock</div>
+                    {/if}
+                    <div class="text-right min-w-0">
+                      <div class="font-semibold">{ach.unlocked ? 'Unlocked' : 'Locked'}</div>
+                      {#if ach.unlocked && ach.completionTime}
+                        <div class="tooltip tooltip-left truncate" data-tip="{formatDate(ach.completionTime)}">
+                          {formatDateSimplified(ach.completionTime)}
+                        </div>
+                      {:else}
+                        <div>{ach.unlocked ? 'Unknown' : ''}</div>
+                      {/if}
                     </div>
-                  {:else}
-                    <div>{ach.unlocked ? 'Unknown' : ''}</div>
-                  {/if}
+                  </div>
                 </td>
               </tr>
             {/each}
