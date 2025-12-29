@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "@iconify-json/heroicons": "^1.2.3",
-        "@iconify-json/simple-icons": "^1.2.63",
+        "@iconify-json/simple-icons": "^1.2.64",
         "@sveltejs/adapter-auto": "^7.0.0",
         "@sveltejs/kit": "^2.49.2",
         "@sveltejs/vite-plugin-svelte": "^6.2.1",

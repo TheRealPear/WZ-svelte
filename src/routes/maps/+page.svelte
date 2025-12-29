@@ -1,6 +1,7 @@
 <script lang="ts">
   import config from '$lib/config.json';
   import { onMount } from 'svelte';
+  import MapCard from '$lib/components/MapCard.svelte';
 
   interface MapEntry {
     id: string;
@@ -16,8 +17,6 @@
     try {
       const response = await fetch(config.API_BASE + '/mc/maps');
       const data: MapEntry[] = await response.json();
-      // Uncomment below to debug
-      // console.log('API Response:', data);
       mapData = data;
     } catch (err) {
       error = 'Failed to load map data';
@@ -27,18 +26,6 @@
     }
   });
 </script>
-
-<style>
-  .image-full {
-    > .card-body {
-      color: white;
-    }
-
-    > figure img {
-      filter: none;
-    }
-  }
-</style>
 
 <svelte:head>
   <title>Maps</title>
@@ -58,28 +45,10 @@
   {:else if error}
     <p class="text-center text-error">{error}</p>
   {:else}
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-    {#each mapData as map}
-    <div class="hover-3d">
-      <div class="card shadow image-full">
-        <figure>
-          <img class="object-cover" src={`https://raw.githubusercontent.com/TBG1000/MapImages/refs/heads/main/Maps/${map.name}/map.png`} alt="" loading="lazy" on:error={(e) => { const img = e.target as HTMLImageElement; img.onerror = null; img.src = '/img/map-fallback.png'; }}/>
-        </figure>
-        <div class="card-body justify-start h-2/5 bg-gradient-to-b from-neutral/60 to-transparent">
-          <h2 class="card-title font-bold">{map.name}</h2>
-        </div>
-      </div>
-      <!-- 8 empty divs needed for the 3D effect -->
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
+      {#each mapData as mapEntry}
+        <MapCard map={mapEntry} />
+      {/each}
     </div>
-    {/each}
-  </div>
-{/if}
+  {/if}
 </div>
