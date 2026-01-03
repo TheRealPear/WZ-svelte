@@ -10,14 +10,32 @@
   }
 
   let mapData: MapEntry[] = [];
-  let loading: boolean = true;
+  let visibleMaps: MapEntry[] = [];
+  let loading = true;
   let error: string | null = null;
+
+  const BATCH_SIZE = 15;
+
+  function progressivelyRender(data: MapEntry[]) {
+    let index = 0;
+
+    function addBatch() {
+      visibleMaps = [...visibleMaps, ...data.slice(index, index + BATCH_SIZE)];
+      index += BATCH_SIZE;
+
+      if (index < data.length) {
+        requestAnimationFrame(addBatch);
+      }
+    }
+
+    requestAnimationFrame(addBatch);
+  }
 
   onMount(async () => {
     try {
       const response = await fetch(config.API_BASE + '/mc/maps');
-      const data: MapEntry[] = await response.json();
-      mapData = data;
+      mapData = await response.json();
+      progressivelyRender(mapData);
     } catch (err) {
       error = 'Failed to load map data';
       console.error(err);
@@ -46,7 +64,7 @@
     <p class="text-center text-error">{error}</p>
   {:else}
     <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-      {#each mapData as mapEntry}
+      {#each visibleMaps as mapEntry}
         <MapCard map={mapEntry} />
       {/each}
     </div>

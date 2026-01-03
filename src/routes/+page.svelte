@@ -1,3 +1,30 @@
+<script lang="ts">
+  import FeatureGrid from "$lib/components/FeatureGrid.svelte";
+
+  async function copyButton(e: MouseEvent) {
+    const btn = e.currentTarget;
+    const tooltip = btn.closest('.tooltip') || btn;
+    const orig = tooltip.getAttribute('data-tip') ?? 'Click to copy';
+    const text = btn.textContent.trim();
+
+    try {
+      await navigator.clipboard.writeText(text);
+      tooltip.setAttribute('data-tip', 'Copied!');
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); tooltip.setAttribute('data-tip', 'Copied!'); } finally { document.body.removeChild(ta); }
+    }
+
+    setTimeout(() => tooltip.setAttribute('data-tip', orig), 1500);
+  }
+</script>
+
 <svelte:head>
   <title>Warzone</title>
 </svelte:head>
@@ -28,35 +55,7 @@
   <section>
     <h2 class="text-3xl font-extrabold">Why Warzone?</h2>
     <!-- Cards -->
-    <div class="not-prose mt-4 flex flex-col sm:flex-row items-center mx-auto gap-8">
-      <div class="card bg-base-100 w-84 shadow-sm">
-        <figure>
-          <img src="/img/fg-open.webp" alt=""/>
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Automated Matches</h2>
-          <p>The server is always open for you to come on and practice your skills!</p>
-        </div>
-      </div>
-      <div class="card bg-base-100 w-84 shadow-sm">
-        <figure>
-          <img src="/img/fg-match.webp" alt=""/>
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Comprehensive Stats</h2>
-          <p>K/D, W/R, and more with full match tracking. All in one place.</p>
-        </div>
-      </div>
-      <div class="card bg-base-100 w-84 shadow-sm">
-        <figure>
-          <img src="/img/fg-player.webp" alt=""/>
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Open Source</h2>
-          <p>Every part of Warzone is driven by community contributions.</p>
-        </div>
-      </div>
-    </div>
+    <FeatureGrid />
   </section>
   <section>
     <h2 class="text-3xl font-extrabold">Start Playing!</h2>
@@ -72,28 +71,3 @@
     <p>If you are not able to play right now, you can join us on <a href="https://warz.one/discord">Discord</a> to stay in touch.</p>
   </section>
 </div>
-
-<script lang="ts">
-  async function copyButton(e: MouseEvent) {
-    const btn = e.currentTarget;
-    const tooltip = btn.closest('.tooltip') || btn;
-    const orig = tooltip.getAttribute('data-tip') ?? 'Click to copy';
-    const text = btn.textContent.trim();
-
-    try {
-      await navigator.clipboard.writeText(text);
-      tooltip.setAttribute('data-tip', 'Copied!');
-    } catch {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.setAttribute('readonly', '');
-      ta.style.position = 'absolute';
-      ta.style.left = '-9999px';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); tooltip.setAttribute('data-tip', 'Copied!'); } finally { document.body.removeChild(ta); }
-    }
-
-    setTimeout(() => tooltip.setAttribute('data-tip', orig), 1500);
-  }
-</script>
