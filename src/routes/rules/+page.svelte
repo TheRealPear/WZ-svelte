@@ -1,18 +1,17 @@
 <script lang="ts">
   import Metadata from '$lib/components/Metadata.svelte';
-
-  const pageTitle = 'Server Rules';
-  const pageDescription =
-    'Failure to abide by any of the rules listed on this page may result in a punishment for your Minecraft or Discord account.';
 </script>
 
-<Metadata title={pageTitle} description={pageDescription} />
+<Metadata
+  title="Server Rules"
+  description="Failure to abide by any of the rules listed on this page may result in a punishment for your Minecraft or Discord account."
+/>
 
 <div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
   <hgroup>
-    <h1 class="text-3xl">{pageTitle}</h1>
+    <h1 class="text-3xl">Server Rules</h1>
     <p class="font-bold">This page was last updated on July 28th, 2022.</p>
-    <p>{pageDescription} If you have any questions about a rule, please contact a staff member on our Discord server for more information.</p>
+    <p>Failure to abide by any of the rules listed on this page may result in a punishment for your Minecraft or Discord account. If you have any questions about a rule, please contact a staff member on our Discord server for more information.</p>
     <p>These rules are subject to change at any time, with or without notice. It is your responsibility to keep up-to-date with the rules.</p>
   </hgroup>
   <div class="divider"></div>

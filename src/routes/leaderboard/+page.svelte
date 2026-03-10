@@ -10,18 +10,16 @@
 
   export let data: PageData;
 
-  const pageTitle = 'Leaderboard';
-  const pageDescription = 'The highest ranked players on Warzone.';
   const leaderboardData = (data.leaderboard ?? []) as LeaderboardEntry[];
   const error = data.error;
 </script>
 
-<Metadata title={pageTitle} description={pageDescription} />
+<Metadata title="Leaderboard" description="The highest ranked players on Warzone." />
 
 <div class="mx-auto max-w-5xl w-full [&_h1]:my-3 [&_hr]:my-3">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">{pageTitle}</h1>
-    <p class="text-base-content/90">{pageDescription}</p>
+    <h1 class="text-3xl font-extrabold">Leaderboard</h1>
+    <p class="text-base-content/90">The highest ranked players on Warzone.</p>
   </hgroup>
   <div class="divider"></div>
   {#if error}

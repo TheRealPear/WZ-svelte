@@ -1,19 +1,18 @@
 <script lang="ts">
   import ExclamationTriangle from 'virtual:icons/heroicons/exclamation-triangle';
   import Metadata from '$lib/components/Metadata.svelte';
-
-  const pageTitle = 'Screenshare Policy';
-  const pageDescription =
-    "In an effort to combat cheating, Warzone is utilizing screensharing to search suspected players' computers for prohibited modifications.";
 </script>
 
-<Metadata title={pageTitle} description={pageDescription} />
+<Metadata
+  title="Screenshare Policy"
+  description="In an effort to combat cheating, Warzone is utilizing screensharing to search suspected players' computers for prohibited modifications."
+/>
 
 <div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
   <hgroup>
-    <h1 class="text-3xl">{pageTitle}</h1>
+    <h1 class="text-3xl">Screenshare Policy</h1>
     <p class="font-bold">This page was last updated on July 15th, 2021.</p>
-    <p>{pageDescription}</p>
+    <p>In an effort to combat cheating, Warzone is utilizing screensharing to search suspected players' computers for prohibited modifications.</p>
     <p>Our Screenshare Policy may be updated at any time, with or without notice. It is your responsibility to keep up-to-date with the content on this page.</p>
   </hgroup>
   <div class="divider"></div>

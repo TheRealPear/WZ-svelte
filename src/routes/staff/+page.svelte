@@ -17,20 +17,18 @@
 
   export let data: PageData;
 
-  const pageTitle = 'Staff';
-  const pageDescription = 'Meet the dedicated people who guide, support, and keep Warzone thriving.';
   const staffRanks = (data.staffRanks ?? []) as Rank[];
   const staffPlayers = (data.staffPlayers ?? {}) as Record<string, Player[]>;
   const error = data.error;
 </script>
 
-<Metadata title={pageTitle} description={pageDescription} />
+<Metadata title="Staff" description="Meet the dedicated people who guide, support, and keep Warzone thriving." />
 
 <div class="mx-auto max-w-5xl [&_h1]:my-3">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">{pageTitle}</h1>
+    <h1 class="text-3xl font-extrabold">Staff</h1>
     <div class="space-y-2">
-      <p class="text-base-content/90">{pageDescription}</p>
+      <p class="text-base-content/90">Meet the dedicated people who guide, support, and keep Warzone thriving.</p>
       <p class="text-base-content/90">We also honor our <a class="link" href="/retired">retired staff</a>, whose contributions helped shape the community.</p>
     </div>
   </hgroup>

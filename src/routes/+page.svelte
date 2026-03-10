@@ -2,12 +2,6 @@
   import FeatureGrid from "$lib/components/FeatureGrid.svelte";
   import Metadata from '$lib/components/Metadata.svelte';
 
-  const pageTitle = 'Warzone';
-  const storyIntro =
-    'Warzone was founded on December 20, 2014, by Luuke, just a month after launching Minehut. Created as a team-oriented PvP server, it quickly became a home for both casual players and competitive communities. We are proud to remain one of the oldest independent Minehut communities.';
-  const pageDescription =
-    'Warzone offers a constantly evolving library of more than a thousand maps across ten gamemodes. With a dynamic map pool and voting system, every match adapts to player activity, keeping gameplay fresh, balanced, and exciting.';
-
   async function copyButton(e: MouseEvent) {
     const btn = e.currentTarget;
     const tooltip = btn.closest('.tooltip') || btn;
@@ -32,12 +26,15 @@
   }
 </script>
 
-<Metadata title={pageTitle} description={pageDescription} />
+<Metadata
+  title="Warzone"
+  description="Warzone offers a constantly evolving library of more than a thousand maps across ten gamemodes. With a dynamic map pool and voting system, every match adapts to player activity, keeping gameplay fresh, balanced, and exciting."
+/>
 
 <header class="hero h-74 mx-auto bg-[url(/img/jumbotron-bg.webp)]">
   <div class="hero-overlay"><!-- Dummy div to make text readable --></div>
   <div class="hero-content text-center text-neutral-content flex flex-col">
-    <h1 class="text-5xl font-bold">{pageTitle}</h1>
+    <h1 class="text-5xl font-bold">Warzone</h1>
     <span class="text-rotate text-xl">
       <span class="justify-items-center">
         <span>Take the objectives</span>
@@ -54,8 +51,8 @@
 <div class="mx-auto max-sm:m-2 max-w-4xl prose text-center [&_h1]:my-3 [&_h2]:my-3">
   <section>
     <h2 class="text-3xl font-extrabold">Our Story</h2>
-    <p>{storyIntro}</p>
-    <p>{pageDescription}</p>
+    <p>Warzone was founded on December 20, 2014, by Luuke, just a month after launching Minehut. Created as a team-oriented PvP server, it quickly became a home for both casual players and competitive communities. We are proud to remain one of the oldest independent Minehut communities.</p>
+    <p>Warzone offers a constantly evolving library of more than a thousand maps across ten gamemodes. With a dynamic map pool and voting system, every match adapts to player activity, keeping gameplay fresh, balanced, and exciting.</p>
   </section>
   <section>
     <h2 class="text-3xl font-extrabold">Why Warzone?</h2>
