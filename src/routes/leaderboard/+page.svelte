@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import Metadata from '$lib/components/Metadata.svelte';
 
   interface LeaderboardEntry {
     id: string;
@@ -9,18 +10,18 @@
 
   export let data: PageData;
 
+  const pageTitle = 'Leaderboard';
+  const pageDescription = 'The highest ranked players on Warzone.';
   const leaderboardData = (data.leaderboard ?? []) as LeaderboardEntry[];
   const error = data.error;
 </script>
 
-<svelte:head>
-  <title>Leaderboard</title>
-</svelte:head>
+<Metadata title={pageTitle} description={pageDescription} />
 
 <div class="mx-auto max-w-5xl w-full [&_h1]:my-3 [&_hr]:my-3">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">Leaderboard</h1>
-    <p class="text-base-content/90">The highest ranked players on Warzone.</p>
+    <h1 class="text-3xl font-extrabold">{pageTitle}</h1>
+    <p class="text-base-content/90">{pageDescription}</p>
   </hgroup>
   <div class="divider"></div>
   {#if error}

@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import { onMount } from 'svelte';
+  import Metadata from '$lib/components/Metadata.svelte';
   import MapCard from '$lib/components/MapCard.svelte';
 
   interface MapEntry {
@@ -12,6 +13,8 @@
   export let data: PageData;
 
   const BATCH_SIZE = 15;
+  const pageTitle = 'Maps';
+  const pageDescription = 'View the expansive collection of maps currently available on Warzone.';
   const mapData = (data.maps ?? []) as MapEntry[];
   let visibleMaps: MapEntry[] = mapData.slice(0, BATCH_SIZE);
   const error = data.error;
@@ -38,14 +41,12 @@
   });
 </script>
 
-<svelte:head>
-  <title>Maps</title>
-</svelte:head>
+<Metadata title={pageTitle} description={pageDescription} />
 
 <div class="mx-auto max-w-4xl w-full [&_h1]:my-3">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">Maps</h1>
-    <p class="text-base-content/90">View the expansive collection of maps currently available on Warzone.</p>
+    <h1 class="text-3xl font-extrabold">{pageTitle}</h1>
+    <p class="text-base-content/90">{pageDescription}</p>
   </hgroup>
   <div class="divider"></div>
   {#if error}

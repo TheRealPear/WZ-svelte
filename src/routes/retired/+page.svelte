@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import Metadata from '$lib/components/Metadata.svelte';
 
   function normalizeRoles(role: string | string[]): string[] {
     return Array.isArray(role) ? role : [role];
@@ -7,6 +8,8 @@
 
   export let data: PageData;
 
+  const pageTitle = 'Retired Staff';
+  const pageDescription = 'Honoring the people whose efforts laid the foundation for Warzone.';
   const retired = (data.retired ?? []).map(entry => ({
     ...entry,
     roles: entry.roles ?? normalizeRoles(entry.role)
@@ -14,15 +17,13 @@
   const error = data.error;
 </script>
 
-<svelte:head>
-  <title>Retired Staff</title>
-</svelte:head>
+<Metadata title={pageTitle} description={pageDescription} />
 
 <div class="mx-auto max-w-5xl [&_h1]:my-3">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">Retired Staff</h1>
+    <h1 class="text-3xl font-extrabold">{pageTitle}</h1>
     <div class="space-y-4">
-      <p class="text-base-content/90">Honoring the people whose efforts laid the foundation for Warzone.</p>
+      <p class="text-base-content/90">{pageDescription}</p>
       <div role="alert" class="alert">
         <span>Please note this list is not complete. You can help by submitting updates via GitHub.</span>
       </div>

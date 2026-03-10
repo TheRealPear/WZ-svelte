@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import Metadata from '$lib/components/Metadata.svelte';
   import { formatDate, formatDateSimplified, formatHours } from '$lib/scripts/date';
   import { calculateLevel, formatXPProgress } from '$lib/scripts/pgm';
   import Trophy from 'virtual:icons/heroicons/trophy';
@@ -39,12 +40,14 @@
 
   // List of all achievements
   const achievements = (data.achievements ?? []) as AchievementItem[];
+  const pageDescription =
+    name === 'Unknown'
+      ? 'View a Warzone player profile, including activity, stats, ranks, and achievements.'
+      : `View the Warzone profile for ${name}, including activity, stats, ranks, and achievements.`;
 
 </script>
 
-<svelte:head>
-  <title>{name}</title>
-</svelte:head>
+<Metadata title={name} description={pageDescription} />
 
 <div class="mx-auto max-w-5xl w-full space-y-4">
   <!-- User info card -->

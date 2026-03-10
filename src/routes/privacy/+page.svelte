@@ -1,12 +1,18 @@
-<svelte:head>
-  <title>Privacy Policy</title>
-</svelte:head>
+<script lang="ts">
+  import Metadata from '$lib/components/Metadata.svelte';
+
+  const pageTitle = 'Privacy Policy';
+  const pageDescription =
+    'By using our Warzone service, information may be collected and stored in numerous ways.';
+</script>
+
+<Metadata title={pageTitle} description={pageDescription} />
 
 <div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
   <hgroup>
-    <h1 class="text-3xl">Privacy Policy</h1>
+    <h1 class="text-3xl">{pageTitle}</h1>
     <p class="font-bold">This page was last updated on July 23rd, 2022 (updated policy regarding inventory data).</p>
-    <p>By using our (Warzone) Service, information may be collected and/or stored in numerous ways:</p>
+    <p>{pageDescription}</p>
   </hgroup>
   <div class="divider"></div>
   <section>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import Metadata from '$lib/components/Metadata.svelte';
   import { gamemodes, getElapsedMatchTime, formatMatchTime } from '$lib/scripts/pgm';
   import Clock from 'virtual:icons/heroicons/clock';
   export let data: PageData;
@@ -20,11 +21,13 @@
   };
   const matchDate = new Date(match.loadedAt).toLocaleDateString('en-US', dateOptions as any) ?? 'Unknown';
   const participants = Object.values(match.participants) as any[];
+  const pageDescription =
+    mapName === 'Unknown'
+      ? 'View Warzone match results.'
+      : `View Warzone match results for ${mapName}${gameType === 'Unknown' ? '' : `, a ${gameType.toLowerCase()} map`}.`;
 </script>
 
-<svelte:head>
-  <title>Match Results</title>
-</svelte:head>
+<Metadata title={mapName} description={pageDescription} />
 
 <div class="mx-auto max-w-5xl w-full space-y-4">
   <!-- Basic match details -->
