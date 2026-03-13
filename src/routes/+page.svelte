@@ -1,5 +1,6 @@
 <script lang="ts">
   import FeatureGrid from "$lib/components/FeatureGrid.svelte";
+  import Metadata from '$lib/components/Metadata.svelte';
 
   async function copyButton(e: MouseEvent) {
     const btn = e.currentTarget;
@@ -25,9 +26,10 @@
   }
 </script>
 
-<svelte:head>
-  <title>Warzone</title>
-</svelte:head>
+<Metadata
+  title="Warzone"
+  description="Warzone offers a constantly evolving library of more than a thousand maps across ten gamemodes. With a dynamic map pool and voting system, every match adapts to player activity, keeping gameplay fresh, balanced, and exciting."
+/>
 
 <header class="hero h-74 mx-auto bg-[url(/img/jumbotron-bg.webp)]">
   <div class="hero-overlay"><!-- Dummy div to make text readable --></div>
@@ -50,7 +52,7 @@
   <section>
     <h2 class="text-3xl font-extrabold">Our Story</h2>
     <p>Warzone was founded on December 20, 2014, by Luuke, just a month after launching Minehut. Created as a team-oriented PvP server, it quickly became a home for both casual players and competitive communities. We are proud to remain one of the oldest independent Minehut communities.</p>
-    <p>Today, Warzone offers a constantly evolving library of more than a thousand maps across ten gamemodes. With a dynamic map pool and voting system, every match adapts to player activity, keeping gameplay fresh, balanced, and exciting.</p>
+    <p>Warzone offers a constantly evolving library of more than a thousand maps across ten gamemodes. With a dynamic map pool and voting system, every match adapts to player activity, keeping gameplay fresh, balanced, and exciting.</p>
   </section>
   <section>
     <h2 class="text-3xl font-extrabold">Why Warzone?</h2>

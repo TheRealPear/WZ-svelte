@@ -1,6 +1,11 @@
-<svelte:head>
-  <title>Server Rules</title>
-</svelte:head>
+<script lang="ts">
+  import Metadata from '$lib/components/Metadata.svelte';
+</script>
+
+<Metadata
+  title="Server Rules"
+  description="Failure to abide by any of the rules listed on this page may result in a punishment for your Minecraft or Discord account."
+/>
 
 <div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
   <hgroup>
