@@ -11,7 +11,7 @@
   <hgroup>
     <h1 class="text-3xl">Privacy Policy</h1>
     <p class="font-bold">This page was last updated on July 23rd, 2022 (updated policy regarding inventory data).</p>
-    <p>By using our Warzone service, information may be collected and stored in numerous ways.</p>
+    <p>By using our (Warzone) Service, information may be collected and/or stored in numerous ways:</p>
   </hgroup>
   <div class="divider"></div>
   <section>
