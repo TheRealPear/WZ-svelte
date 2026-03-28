@@ -1,70 +1,21 @@
 <script lang="ts">
-  import config from '$lib/config.json';
-  import retiredRaw from '$lib/retired.json';
-  import { onMount } from 'svelte';
+  import type { PageData } from './$types';
+  import Metadata from '$lib/components/Metadata.svelte';
 
   function normalizeRoles(role: string | string[]): string[] {
     return Array.isArray(role) ? role : [role];
   }
 
-  let retired = retiredRaw.map(entry => ({
+  export let data: PageData;
+
+  const retired = (data.retired ?? []).map(entry => ({
     ...entry,
-    roles: normalizeRoles(entry.role)
+    roles: entry.roles ?? normalizeRoles(entry.role)
   }));
-
-  let loading = true;
-  let error: string | null = null;
-
-  const CACHE_KEY = 'retiredStaffUsernames';
-  const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days
-
-  async function resolveUsernames() {
-    try {
-      const cached = sessionStorage.getItem(CACHE_KEY);
-      if (cached) {
-        const parsed = JSON.parse(cached);
-        if (Date.now() - parsed.timestamp < CACHE_TTL) {
-          console.log('Using cached usernames');
-          retired = retired.map(entry => ({
-            ...entry,
-            username: parsed.data[entry.uuid] || entry.username
-          }));
-          loading = false;
-          return;
-        }
-      }
-      // Get current username from Mars
-      const usernameMap: Record<string, string> = {};
-      for (const entry of retired) {
-        try {
-          const res = await fetch(`${config.API_BASE}/mc/players/${entry.uuid}`);
-          const data = await res.json();
-          usernameMap[entry.uuid] = data.name;
-        } catch (err) {
-          console.error(`Failed to resolve username for ${entry.uuid}`, err);
-          usernameMap[entry.uuid] = entry.username;
-        }
-      }
-      retired = retired.map(entry => ({
-        ...entry,
-        username: usernameMap[entry.uuid]
-      }));
-      // Cache results
-      sessionStorage.setItem(CACHE_KEY, JSON.stringify({ data: usernameMap, timestamp: Date.now() }));
-    } catch (err) {
-      error = 'Failed to resolve retired staff usernames';
-      console.error(err);
-    } finally {
-      loading = false;
-    }
-  }
-
-  onMount(resolveUsernames);
+  const error = data.error;
 </script>
 
-<svelte:head>
-  <title>Retired Staff</title>
-</svelte:head>
+<Metadata title="Retired Staff" description="Honoring the people whose efforts laid the foundation for Warzone." />
 
 <div class="mx-auto max-w-5xl [&_h1]:my-3">
   <hgroup>
@@ -77,6 +28,9 @@
     </div>
   </hgroup>
   <div class="divider"></div>
+  {#if error}
+    <p class="mb-4 text-center text-error">{error}</p>
+  {/if}
   <div class="card bg-base-100 shadow-sm">
     <div class="card-body">
       <div class="grid grid-cols-2 gap-6 max-sm:grid-cols-1">

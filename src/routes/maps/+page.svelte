@@ -1,6 +1,7 @@
 <script lang="ts">
-  import config from '$lib/config.json';
+  import type { PageData } from './$types';
   import { onMount } from 'svelte';
+  import Metadata from '$lib/components/Metadata.svelte';
   import MapCard from '$lib/components/MapCard.svelte';
 
   interface MapEntry {
@@ -9,15 +10,15 @@
     imageUrl: string;
   }
 
-  let mapData: MapEntry[] = [];
-  let visibleMaps: MapEntry[] = [];
-  let loading = true;
-  let error: string | null = null;
+  export let data: PageData;
 
   const BATCH_SIZE = 15;
+  const mapData = (data.maps ?? []) as MapEntry[];
+  let visibleMaps: MapEntry[] = mapData.slice(0, BATCH_SIZE);
+  const error = data.error;
 
   function progressivelyRender(data: MapEntry[]) {
-    let index = 0;
+    let index = visibleMaps.length;
 
     function addBatch() {
       visibleMaps = [...visibleMaps, ...data.slice(index, index + BATCH_SIZE)];
@@ -31,23 +32,14 @@
     requestAnimationFrame(addBatch);
   }
 
-  onMount(async () => {
-    try {
-      const response = await fetch(config.API_BASE + '/mc/maps');
-      mapData = await response.json();
+  onMount(() => {
+    if (mapData.length > visibleMaps.length) {
       progressivelyRender(mapData);
-    } catch (err) {
-      error = 'Failed to load map data';
-      console.error(err);
-    } finally {
-      loading = false;
     }
   });
 </script>
 
-<svelte:head>
-  <title>Maps</title>
-</svelte:head>
+<Metadata title="Maps" description="View the expansive collection of maps currently available on Warzone." />
 
 <div class="mx-auto max-w-4xl w-full [&_h1]:my-3">
   <hgroup>
@@ -55,12 +47,7 @@
     <p class="text-base-content/90">View the expansive collection of maps currently available on Warzone.</p>
   </hgroup>
   <div class="divider"></div>
-  {#if loading}
-    <div class="text-center">
-      <span class="loading loading-spinner loading-xl text-primary"></span>
-      <p>Loading maps...</p>
-    </div>
-  {:else if error}
+  {#if error}
     <p class="text-center text-error">{error}</p>
   {:else}
     <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">

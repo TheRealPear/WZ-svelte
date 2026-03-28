@@ -1,6 +1,11 @@
-<svelte:head>
-  <title>Privacy Policy</title>
-</svelte:head>
+<script lang="ts">
+  import Metadata from '$lib/components/Metadata.svelte';
+</script>
+
+<Metadata
+  title="Privacy Policy"
+  description="By using our Warzone service, information may be collected and stored in numerous ways."
+/>
 
 <div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
   <hgroup>

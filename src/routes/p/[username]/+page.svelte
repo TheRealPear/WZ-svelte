@@ -1,9 +1,8 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import Metadata from '$lib/components/Metadata.svelte';
   import { formatDate, formatDateSimplified, formatHours } from '$lib/scripts/date';
   import { calculateLevel, formatXPProgress } from '$lib/scripts/pgm';
-  import { rankName, rankPriority, rankColor, loadRanks } from '$lib/scripts/ranks';
-  import { onMount } from 'svelte';
   import Trophy from 'virtual:icons/heroicons/trophy';
 
   export let data: PageData;
@@ -13,7 +12,6 @@
   const name = (player.name as string) ?? 'Unknown';
   const firstJoinMs = (player.firstJoinedAt as number) ?? 1419033600000;
   const lastJoinMs = (player.lastJoinedAt as number) ?? 1419033600000;
-  const rankIds: string[] = player.rankIds ?? [];
   const stats = (player.stats ?? {}) as Record<string, any>;
   const exp = (stats.xp ?? 0) as number;
   const playTime = (stats.gamePlaytime ?? 0) as number;
@@ -24,13 +22,11 @@
   const ties = (stats.ties ?? 0) as number;
   const matches = (stats.matches ?? 0) as number;
 
-  type ResolvedRank = {
+  const resolvedRanks = (data.resolvedRanks ?? []) as {
     name: string;
     priority: number;
     color?: string;
-  };
-
-  let resolvedRanks: ResolvedRank[] = [];
+  }[];
 
   // Achievements handling
   type AchievementItem = {
@@ -44,29 +40,14 @@
 
   // List of all achievements
   const achievements = (data.achievements ?? []) as AchievementItem[];
+  const pageDescription =
+    name === 'Unknown'
+      ? 'View a Warzone player profile, including activity, stats, ranks, and achievements.'
+      : `View the Warzone profile for ${name}, including activity, stats, ranks, and achievements.`;
 
-  onMount(async () => {
-    await loadRanks();
-    const removeDuplicate = new Set<string>();
-    resolvedRanks = rankIds
-      .map(id => ({
-        name: rankName(id)!,
-        priority: rankPriority(id)!,
-        color: rankColor(id)
-      }))
-      .filter(r => {
-        if (!r.name || r.priority === null) return false;
-        if (removeDuplicate.has(r.name)) return false;
-        removeDuplicate.add(r.name);
-        return true;
-      })
-      .sort((a, b) => b.priority - a.priority);
-  });
 </script>
 
-<svelte:head>
-  <title>{name}</title>
-</svelte:head>
+<Metadata title={name} description={pageDescription} />
 
 <div class="mx-auto max-w-5xl w-full space-y-4">
   <!-- User info card -->
