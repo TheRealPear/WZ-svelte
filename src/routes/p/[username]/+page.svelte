@@ -56,7 +56,7 @@
       <div class="grid grid-col-1 md:grid-cols-[auto_1fr_auto] gap-x-6 max-sm:gap-y-2 items-center w-full">
         <!-- Left column -->
         <div class="max-sm:grid max-sm:justify-center">
-          <img class="size-24 rounded flex-shrink-0 shadow-lg/20" alt="" src={"https://minotar.net/helm/" + id + ".svg"}/>
+          <img class="size-24 rounded flex-shrink-0 shadow-lg/20" alt="" src={"https://minotar.net/helm/" + id + ".svg"} fetchpriority="high"/>
         </div>
         <!-- Middle column -->
         <div class="flex flex-col space-y-2">

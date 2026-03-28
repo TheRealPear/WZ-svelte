@@ -7,7 +7,7 @@
   <div class="navbar-start">
     <!-- Mobile version -->
     <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
       </div>
       <ul role="list" class="menu menu-md dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
@@ -32,7 +32,7 @@
   </div>
   <div class="navbar-end">
     <!-- Search button -->
-    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Search">
       <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
     </div>
     <!-- Search bar -->
