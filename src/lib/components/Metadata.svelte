@@ -28,4 +28,6 @@
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content={`@${config.TWITTER}`} />
+
+  <meta name="theme-color" content="#9148D3">
 </svelte:head>
