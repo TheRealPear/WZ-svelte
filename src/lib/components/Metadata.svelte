@@ -13,6 +13,7 @@
   $: isHome = page.url.pathname === '/';
   $: fullTitle = isHome || !pageName ? config.NAME : `${pageName} - ${config.NAME}`;
   $: canonicalUrl = `${page.url.origin}${page.url.pathname}`;
+  $: pageImage = `${page.url.origin}/img/social-icon.png`;
 </script>
 
 <svelte:head>
@@ -24,6 +25,7 @@
   <meta property="og:description" content={resolvedDescription} />
   <meta property="og:site_name" content={config.NAME} />
   <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={pageImage} />
   <meta property="og:type" content="website" />
 
   <meta name="twitter:card" content="summary" />
