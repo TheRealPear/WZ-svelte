@@ -1,6 +1,7 @@
 <script lang="ts">
   import config from '$lib/config.json';
   import navigation from '$lib/navigation';
+  import Searchbar from '$lib/components/Searchbar.svelte'
 </script>
 
 <nav class="navbar bg-base-200 shadow-sm">
@@ -32,18 +33,10 @@
   </div>
   <div class="navbar-end">
     <!-- Search button -->
-    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Search">
+    <button tabindex="0" class="btn btn-ghost" aria-label="Search" commandfor="player_search" command="show-modal">
       <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
-    </div>
-    <!-- Search bar -->
-    <label class="input max-lg:hidden">
-      <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
-          <circle cx="11" cy="11" r="8"></circle>
-          <path d="m21 21-4.3-4.3"></path>
-        </g>
-      </svg>
-      <input type="search" placeholder="Search player"/>
-    </label>
+    </button>
   </div>
 </nav>
+
+<Searchbar />
