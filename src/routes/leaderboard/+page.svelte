@@ -47,7 +47,7 @@
               <td>
                 <div class="flex items-center gap-2">
                   <img class="size-8 rounded flex-shrink-0 shadow" src="https://minotar.net/helm/{entry.id}.svg" alt="" loading="lazy"/>
-                  <a class="no-underline hover:underline" href="/p/{entry.name}">{entry.name}</a>
+                  <a class="hover:underline" href="/p/{entry.name}">{entry.name}</a>
                 </div>
               </td>
               <th>#{index + 1}</th>
