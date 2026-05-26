@@ -49,7 +49,7 @@
 
 <Metadata title={name} description={pageDescription} />
 
-<div class="mx-auto max-w-5xl w-full space-y-4">
+<div class="mx-auto max-w-5xl w-full space-y-4 [&_.card]:bg-base-100">
   <!-- User info card -->
   <div class="card w-full shadow">
     <div class="card-body">
@@ -161,7 +161,7 @@
                 <td class="text-right">
                   <div class="flex justify-end gap-3 max-sm:flex-col max-sm:items-end items-center">
                     {#if ach.firstToUnlock}
-                      <div class="badge badge-neutral badge-soft max-sm:badge-sm whitespace-nowrap">First Unlock</div>
+                      <div class="badge badge-soft max-sm:badge-sm whitespace-nowrap">First Unlock</div>
                     {/if}
                     <div class="text-right min-w-0">
                       <div class="font-semibold">{ach.unlocked ? 'Unlocked' : 'Locked'}</div>

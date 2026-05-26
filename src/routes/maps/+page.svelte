@@ -41,16 +41,16 @@
 
 <Metadata title="Maps" description="View the expansive collection of maps currently available on Warzone." />
 
-<div class="mx-auto max-w-4xl w-full [&_h1]:my-3">
+<div class="mx-auto max-w-5xl">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">Maps</h1>
+    <h1 class="text-3xl font-extrabold mb-3">Maps</h1>
     <p class="text-base-content/90">View the expansive collection of maps currently available on Warzone.</p>
   </hgroup>
   <div class="divider"></div>
   {#if error}
     <p class="text-center text-error">{error}</p>
   {:else}
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
       {#each visibleMaps as mapEntry}
         <MapCard map={mapEntry} />
       {/each}

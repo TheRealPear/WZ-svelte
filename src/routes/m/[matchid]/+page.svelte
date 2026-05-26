@@ -29,7 +29,7 @@
 
 <Metadata title={mapName} description={pageDescription} />
 
-<div class="mx-auto max-w-5xl w-full space-y-4">
+<div class="mx-auto max-w-5xl w-full space-y-4 [&_.card]:bg-base-100">
   <!-- Basic match details -->
   <div class="card w-full shadow">
     <div class="card-body">
@@ -41,7 +41,7 @@
         </div>
         <!-- Right cell -->
         <div class="text-right space-y-1">
-          <p class="inline-flex items-center text-2xl text-neutral gap-1">
+          <p class="inline-flex items-center text-2xl text-neutral-content gap-1">
             <Clock class="size-6 leading-none" />
             {formatMatchTime(getElapsedMatchTime(match))}
           </p>

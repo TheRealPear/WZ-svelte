@@ -7,9 +7,9 @@
   let { children } = $props();
 </script>
 
-<div class="min-h-screen flex flex-col">
+<div class="min-h-screen flex flex-col bg-base-200">
   <Navbar />
-  <main class="flex-grow {page.url.pathname === '/' ? 'pb-8' : 'px-4 py-3'}">
+  <main class="flex-grow {page.url.pathname === '/' ? 'pb-8' : 'px-4 max-sm:py-4 py-8'}"> <!-- normalizes margins & padding from mobile to desktop -->
     {@render children()}
   </main>
   <Footer />

@@ -1,5 +1,5 @@
 <div class="not-prose mt-4 flex flex-col sm:flex-row items-center mx-auto gap-8">
-  <div class="card bg-base-200 w-84 shadow-sm">
+  <div class="card bg-base-100 w-84 shadow">
     <figure>
       <img src="/img/fg-open.webp" alt=""/>
     </figure>
@@ -8,7 +8,7 @@
       <p>The server is always open for you to come on and practice your skills!</p>
     </div>
   </div>
-  <div class="card bg-base-200 w-84 shadow-sm">
+  <div class="card bg-base-100 w-84 shadow">
     <figure>
       <img src="/img/fg-match.webp" alt=""/>
     </figure>
@@ -17,7 +17,7 @@
       <p>K/D, W/R, and more with full match tracking. All in one place.</p>
     </div>
   </div>
-  <div class="card bg-base-200 w-84 shadow-sm">
+  <div class="card bg-base-100 w-84 shadow">
     <figure>
       <img src="/img/fg-player.webp" alt=""/>
     </figure>

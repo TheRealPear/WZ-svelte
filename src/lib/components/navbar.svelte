@@ -4,7 +4,7 @@
   import Searchbar from '$lib/components/Searchbar.svelte'
 </script>
 
-<nav class="navbar bg-base-200 shadow-sm">
+<nav class="navbar bg-base-300 shadow-sm">
   <div class="navbar-start">
     <!-- Mobile version -->
     <div class="dropdown">

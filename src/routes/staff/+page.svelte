@@ -24,9 +24,9 @@
 
 <Metadata title="Staff" description="Meet the dedicated people who guide, support, and keep Warzone thriving." />
 
-<div class="mx-auto max-w-5xl [&_h1]:my-3">
+<div class="mx-auto max-w-5xl">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">Staff</h1>
+    <h1 class="text-3xl font-extrabold mb-3">Staff</h1>
     <div class="space-y-2">
       <p class="text-base-content/90">Meet the dedicated people who guide, support, and keep Warzone thriving.</p>
       <p class="text-base-content/90">We also honor our <a class="link" href="/retired">retired staff</a>, whose contributions helped shape the community.</p>

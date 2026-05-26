@@ -17,12 +17,12 @@
 
 <Metadata title="Retired Staff" description="Honoring the people whose efforts laid the foundation for Warzone." />
 
-<div class="mx-auto max-w-5xl [&_h1]:my-3">
+<div class="mx-auto max-w-5xl">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">Retired Staff</h1>
+    <h1 class="text-3xl font-extrabold mb-3">Retired Staff</h1>
     <div class="space-y-4">
       <p class="text-base-content/90">Honoring the people whose efforts laid the foundation for Warzone.</p>
-      <div role="alert" class="alert">
+      <div role="alert" class="alert bg-base-100">
         <span>Please note this list is not complete. You can help by submitting updates via GitHub.</span>
       </div>
     </div>

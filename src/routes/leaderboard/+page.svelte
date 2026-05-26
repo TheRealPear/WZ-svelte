@@ -16,15 +16,22 @@
 
 <Metadata title="Leaderboard" description="The highest ranked players on Warzone." />
 
-<div class="mx-auto max-w-5xl w-full [&_h1]:my-3 [&_hr]:my-3">
+<div class="mx-auto max-w-5xl w-full [&_hr]:my-3">
   <hgroup>
-    <h1 class="text-3xl font-extrabold">Leaderboard</h1>
+    <h1 class="text-3xl font-extrabold mb-3">Leaderboard</h1>
     <p class="text-base-content/90">The highest ranked players on Warzone.</p>
   </hgroup>
   <div class="divider"></div>
   {#if error}
     <p class="text-center text-error">{error}</p>
   {:else}
+    <!-- <div role="tablist" class="tabs tabs-border">
+      <a role="tab" class="tab">Kills</a>
+      <a role="tab" class="tab">Deaths</a>
+      <a role="tab" class="tab">Wins</a>
+      <a role="tab" class="tab">Losses</a>
+      <a role="tab" class="tab tab-active">XP</a>
+    </div> -->
     <div class="overflow-x-auto">
       <table class="table table-md w-full">
         <thead>

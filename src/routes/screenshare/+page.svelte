@@ -8,7 +8,7 @@
   description="In an effort to combat cheating, Warzone is utilizing screensharing to search suspected players' computers for prohibited modifications."
 />
 
-<div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
+<div class="mx-auto max-w-5xl prose [&_h2]:my-3">
   <hgroup>
     <h1 class="text-3xl">Screenshare Policy</h1>
     <p class="font-bold">This page was last updated on July 15th, 2021.</p>

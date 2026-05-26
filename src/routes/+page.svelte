@@ -34,8 +34,8 @@
 <header class="hero h-74 mx-auto bg-[url(/img/jumbotron-bg.webp)] shadow-md">
   <div class="hero-overlay"><!-- Dummy div to make text readable --></div>
   <div class="hero-content text-center text-neutral-content flex flex-col">
-    <h1 class="text-5xl font-bold">Warzone</h1>
-    <span class="text-rotate text-xl">
+    <h1 class="text-6xl font-bold">Warzone</h1>
+    <span class="text-rotate text-2xl">
       <span class="justify-items-center">
         <span>Take the objectives</span>
         <span>Destroy the enemy team</span>
@@ -43,7 +43,7 @@
       </span>
     </span>
     <div class="tooltip tooltip-bottom" data-tip="Click to copy">
-      <button class="btn btn-accent" on:click={copyButton}>play.warzone.network</button>
+      <button class="btn btn-primary" on:click={copyButton}>play.warzone.network</button>
     </div>
   </div>
 </header>
@@ -65,10 +65,10 @@
       <p>Warzone is open to all Minecraft: Java Edition players from version 1.7 up to the latest release. Bedrock Edition players can join too, with limited support available through the Minehut proxy.</p>
       <div class="mt-4 flex flex-col md:flex-row gap-4 items-center justify-center">
         <div class="tooltip tooltip-bottom" data-tip="Click to copy">
-          <button class="btn btn-accent" on:click={copyButton}>play.warzone.network</button>
+          <button class="btn btn-primary" on:click={copyButton}>play.warzone.network</button>
         </div>
         <div class="tooltip tooltip-bottom" data-tip="Click to copy">
-          <button class="btn btn-neutral" on:click={copyButton}>warzone.bedrock.minehut.gg</button>
+          <button class="btn btn-secondary" on:click={copyButton}>warzone.bedrock.minehut.gg</button>
         </div>
       </div>
       <p>If you are not able to play right now, you can join us on <a href="https://warz.one/discord">Discord</a> to stay in touch.</p>

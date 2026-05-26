@@ -7,7 +7,7 @@
   description="Failure to abide by any of the rules listed on this page may result in a punishment for your Minecraft or Discord account."
 />
 
-<div class="mx-auto max-w-5xl prose [&_h1]:my-3 [&_h2]:my-3">
+<div class="mx-auto max-w-5xl prose [&_h2]:my-3">
   <hgroup>
     <h1 class="text-3xl">Server Rules</h1>
     <p class="font-bold">This page was last updated on July 28th, 2022.</p>

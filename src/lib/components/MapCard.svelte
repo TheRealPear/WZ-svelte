@@ -18,6 +18,6 @@
   </figure>
   <div class="absolute inset-x-0 top-0 h-2/5 bg-gradient-to-b from-black/70 to-transparent pointer-events-none"><!-- dummy div to add background to make card-body readable --></div>
   <div class="card-body relative">
-    <h2 class="card-title text-[#fff] text-xl font-bold">{map.name}</h2>
+    <h2 class="card-title text-[#fff] text-xl font-bold -mt-2">{map.name}</h2>
   </div>
 </div>

@@ -17,7 +17,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
   try {
     const leaderboard = await loadCachedWarzoneJson<LeaderboardEntry[]>(
       fetch,
-      '/mc/leaderboards/XP/ALL_TIME',
+      '/mc/leaderboards/XP/ALL_TIME?limit=50',
       15 * 60 * 1000
     );
 
