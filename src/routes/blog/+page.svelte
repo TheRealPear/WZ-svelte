@@ -7,7 +7,7 @@
 
 <div class="mx-auto max-w-5xl w-full">
   <hgroup>
-    <h1 class="text-3xl font-extrabold my-3">Blog</h1>
+    <h1 class="text-3xl font-extrabold mb-3">Blog</h1>
     <p class="text-base-content/90">A collection of announcements and blog posts covering Warzone.</p>
   </hgroup>
   <div class="divider"></div>
@@ -16,6 +16,7 @@
     <p class="text-center text-error">No posts are available right now. Check back later for updates.</p>
   {/if}
   {#if data.latest}
+  <div class="space-y-4 [&_.card]:bg-base-100">
     <div class="card w-full shadow">
       <div class="card-body">
         <h2 class="card-title text-2xl font-extrabold">
@@ -38,7 +39,7 @@
     <div class="card w-full shadow">
       <div class="card-body">
         <h2 class="card-title">All posts</h2>
-        <ul class="list bg-base-100">
+        <ul class="list">
           {#each data.posts as post}
             <li class="list-row">
               <div>
@@ -55,5 +56,6 @@
         </ul>
       </div>
     </div>
+  </div>
   {/if}
 </div>
