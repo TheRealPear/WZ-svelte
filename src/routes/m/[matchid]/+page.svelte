@@ -53,7 +53,7 @@
   <!-- Participants -->
   <div class="card w-full shadow">
     <div class="card-body">
-      <!-- <h2 class="card-title">Participants</h2> -->
+      <h2 class="card-title">Participants</h2>
       <div class="overflow-x-auto">
         <table class="table w-full">
           <thead>

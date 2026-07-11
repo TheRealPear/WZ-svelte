@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { PageData } from './$types';
     import Metadata from '$lib/components/Metadata.svelte';
-    import { formatMatchTime } from '$lib/scripts/pgm';
+    import { gamemodes, formatMatchTime } from '$lib/scripts/pgm';
     export let data: PageData;
 
     const map = (data.map ?? {}) as any;
@@ -9,6 +9,7 @@
 
     // Map details
     const mapName = map.name ?? 'Unknown';
+    const gameType = gamemodes[map.gamemodes[0] as keyof typeof gamemodes] ?? 'Unknown';
     const mostRecentMatch = map.lastMatchId ?? null;
     const highestKillstreak = records.highestKillstreak ?? null;
     const longestProjectileKill = records.longestProjectileKill ?? null;
@@ -25,7 +26,8 @@
   <!-- Map info card -->
   <div class="card w-full shadow">
     <div class="card-body">
-      <h1 class="card-title text-3xl">{mapName}</h1>
+      <h1 class="card-title text-2xl">{mapName}</h1>
+      <p class="text">{gameType}</p>
     </div>
   </div>
   <!-- Map records card -->
