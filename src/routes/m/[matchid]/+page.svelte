@@ -53,7 +53,7 @@
   <!-- Participants -->
   <div class="card w-full shadow">
     <div class="card-body">
-      <!-- <h2 class="card-title">Participants</h2> -->
+      <h2 class="card-title">Participants</h2>
       <div class="overflow-x-auto">
         <table class="table w-full">
           <thead>
@@ -68,10 +68,10 @@
             {#each participants as entry}
               <tr class="hover:bg-base-300">
                 <td>
-                  <div class="flex items-center gap-2">
+                  <a class="flex items-center gap-2" href="/p/{entry.name}">
                     <img class="size-8 rounded flex-shrink-0 shadow" src="https://minotar.net/helm/{entry.id}.svg" alt=""/>
-                    <a class="no-underline hover:underline" href="/p/{entry.name}">{entry.name}</a>
-                  </div>
+                    <span class="no-underline hover:underline">{entry.name}</span>
+                  </a>
                 </td>
                 {#if gameType !== 'Free For All'}<td>{entry.lastPartyName}</td>{/if}
                 <td>{entry.stats.kills}</td>

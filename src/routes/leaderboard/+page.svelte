@@ -45,10 +45,10 @@
           {#each leaderboardData as entry, index}
             <tr class="hover:bg-base-300">
               <td>
-                <div class="flex items-center gap-2">
+                <a class="flex items-center gap-2" href="/p/{entry.name}">
                   <img class="size-8 rounded flex-shrink-0 shadow" src="https://minotar.net/helm/{entry.id}.svg" alt="" loading="lazy"/>
-                  <a class="no-underline hover:underline" href="/p/{entry.name}">{entry.name}</a>
-                </div>
+                  <span class="no-underline hover:underline">{entry.name}</span>
+                </a>
               </td>
               <th>#{index + 1}</th>
               <td>{entry.score}</td>
