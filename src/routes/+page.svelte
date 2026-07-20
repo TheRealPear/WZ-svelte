@@ -28,7 +28,7 @@
 
 <Metadata
   title="Warzone"
-  description="Warzone offers a constantly evolving library of more than a thousand maps across ten gamemodes. With a dynamic map pool and voting system, every match adapts to player activity, keeping gameplay fresh, balanced, and exciting."
+  description="Warzone is a Minecraft competitive platform built by the community, for the community, with over thousand of maps across ten gamemodes."
 />
 
 <header class="hero h-74 mx-auto bg-[url(/img/jumbotron-bg.webp)] shadow-md">

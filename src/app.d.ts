@@ -8,6 +8,11 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+  declare module 'virtual:icons/*' {
+    const icon: any;
+    export default icon;
+  }
 }
 
 export {};
