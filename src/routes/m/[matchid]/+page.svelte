@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import Metadata from '$lib/components/Metadata.svelte';
-  import { gamemodes, getElapsedMatchTime, formatMatchTime } from '$lib/scripts/pgm';
+  import { displayGamemode, getElapsedMatchTime, formatMatchTime } from '$lib/scripts/pgm';
   import Clock from 'virtual:icons/heroicons/clock';
   export let data: PageData;
 
@@ -9,7 +9,7 @@
 
   // Map name and gamemode
   const mapName = match.level.name ?? 'Unknown';
-  const gameType = gamemodes[match.level.gamemodes[0] as keyof typeof gamemodes] ?? 'Unknown';
+  const gameType = displayGamemode[match.level.gamemodes[0] as keyof typeof displayGamemode]?.long ?? 'Unknown';
 
   // Format match date for display
   var dateOptions = {

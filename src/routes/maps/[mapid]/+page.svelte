@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { PageData } from './$types';
     import Metadata from '$lib/components/Metadata.svelte';
-    import { gamemodes, formatMatchTime } from '$lib/scripts/pgm';
+    import { displayGamemode, formatMatchTime } from '$lib/scripts/pgm';
     export let data: PageData;
 
     const map = (data.map ?? {}) as any;
@@ -9,7 +9,7 @@
 
     // Map details
     const mapName = map.name ?? 'Unknown';
-    const gameType = gamemodes[map.gamemodes[0] as keyof typeof gamemodes] ?? 'Unknown';
+    const gameType = displayGamemode[map.gamemodes[0] as keyof typeof displayGamemode]?.long ?? 'Unknown';
     const mostRecentMatch = map.lastMatchId ?? null;
     const highestKillstreak = records.highestKillstreak ?? null;
     const longestProjectileKill = records.longestProjectileKill ?? null;
@@ -35,7 +35,7 @@
     <div class="card-body">
       <h2 class="card-title">Map Records</h2>
       {#if !Object.values(records).every(v => v === null)}
-      <!-- Check if the map actually has records before we waste our time. Not all maps will have the same records, hence the extra if statements -->
+      <!-- Check if the map actually has records before proceeding. Not all maps will have the same records, hence the extra if statements -->
         <div class="overflow-x-auto">
           <table class="table w-full">
             <thead>

@@ -53,64 +53,36 @@ export function formatXPProgress(exp: number): string {
 }
 
 // Gamemodes
-export const gamemodes = {
-  "ARCADE": "Arcade",
-  "ATTACK_DEFEND": "Attack/Defend",
-  "BEDWARS": "Bed Wars",
-  "BLITZ": "Blitz",
-  "BLITZ_RAGE": "Blitz: Rage",
-  "BRIDGE": "Bridge",
-  "CAPTURE_THE_FLAG": "Capture the Flag",
-  "CAPTURE_THE_WOOL": "Capture the Wool",
-  "CONTROL_THE_POINT": "Control the Point",
-  "DEATHMATCH": "Deathmatch",
-  "DESTROY_THE_CORE": "Destroy the Core",
-  "DESTROY_THE_MONUMENT": "Destroy the Monument",
-  "FIVE_CONTROL_POINT": "5 Control Points",
-  "FLAG_FOOTBALL": "Flag Football",
-  "FREE_FOR_ALL": "Free For All",
-  "INFECTION": "Infection",
-  "KING_OF_THE_FLAG": "King of the Flag",
-  "KING_OF_THE_HILL": "King of the Hill",
-  "MIXED": "Mixed",
-  "PAYLOAD": "Payload",
-  "RACE_FOR_WOOL": "Race for Wool",
-  "RAGE": "Rage",
-  "SCOREBOX": "Scorebox",
-  "SKYWARS": "Skywars",
-  "SURVIVAL_GAMES": "Survival Games"
-};
-
-export const gamemodes_short = {
-  "ARCADE": "Arcade",
-  "ATTACK_DEFEND": "A/D",
-  "BEDWARS": "BW",
-  "BLITZ": "Blitz",
-  "BLITZ_RAGE": "Blitz: Rage",
-  "BRIDGE": "Bridge",
-  "CAPTURE_THE_FLAG": "CTF",
-  "CAPTURE_THE_WOOL": "DTW",
-  "CONTROL_THE_POINT": "CTP",
-  "DEATHMATCH": "TDM",
-  "DESTROY_THE_CORE": "DTC",
-  "DESTROY_THE_MONUMENT": "DTM",
-  "FIVE_CONTROL_POINT": "5CP",
-  "FLAG_FOOTBALL": "FFB",
-  "FREE_FOR_ALL": "FFA",
-  "INFECTION": "Infection",
-  "KING_OF_THE_FLAG": "KoTF",
-  "KING_OF_THE_HILL": "KoTH",
-  "MIXED": "Mixed",
-  "PAYLOAD": "Payload",
-  "RACE_FOR_WOOL": "RFW",
-  "RAGE": "Rage",
-  "SCOREBOX": "Scorebox",
-  "SKYWARS": "SW",
-  "SURVIVAL_GAMES": "SG"
+export const displayGamemode = {
+  ARCADE: { long: "Arcade", short: "Arcade" },
+  ATTACK_DEFEND: { long: "Attack/Defend", short: "A/D" },
+  BEDWARS: { long: "Bed Wars", short: "BW" },
+  BLITZ: { long: "Blitz", short: "Blitz" },
+  BLITZ_RAGE: { long: "Blitz: Rage", short: "Blitz: Rage" },
+  BRIDGE: { long: "Bridge", short: "Bridge" },
+  CAPTURE_THE_FLAG: { long: "Capture the Flag", short: "CTF" },
+  CAPTURE_THE_WOOL: { long: "Capture the Wool", short: "CTW" },
+  CONTROL_THE_POINT: { long: "Control the Point", short: "CTP" },
+  DEATHMATCH: { long: "Deathmatch", short: "TDM" },
+  DESTROY_THE_CORE: { long: "Destroy the Core", short: "DTC" },
+  DESTROY_THE_MONUMENT: { long: "Destroy the Monument", short: "DTM" },
+  FIVE_CONTROL_POINT: { long: "5 Control Points", short: "5CP" },
+  FLAG_FOOTBALL: { long: "Flag Football", short: "FFB" },
+  FREE_FOR_ALL: { long: "Free For All", short: "FFA" },
+  INFECTION: { long: "Infection", short: "Infection" },
+  KING_OF_THE_FLAG: { long: "King of the Flag", short: "KoTF" },
+  KING_OF_THE_HILL: { long: "King of the Hill", short: "KoTH" },
+  MIXED: { long: "Mixed", short: "Mixed" },
+  PAYLOAD: { long: "Payload", short: "PD" },
+  RACE_FOR_WOOL: { long: "Race for Wool", short: "RFW" },
+  RAGE: { long: "Rage", short: "Rage" },
+  SCOREBOX: { long: "Scorebox", short: "Scorebox" },
+  SKYWARS: { long: "Skywars", short: "SW" },
+  SURVIVAL_GAMES: { long: "Survival Games", short: "SG" }
 };
 
 // Match times
-export function getElapsedMatchTime(match) {
+export function getElapsedMatchTime(match: { startedAt?: number; endedAt?: number }): number {
 	const { startedAt, endedAt } = match;
 	let timeElapsed;
 	if (!endedAt) {
@@ -149,7 +121,7 @@ export function formatMatchTime(ms: number) {
 }
 
 // Colors
-export function getStatusColor(match) {
+export function getStatusColor(match: { loadedAt?: number; startedAt?: number; endedAt?: number }): string {
 	const { loadedAt, startedAt, endedAt } = match;
 	if (loadedAt && !startedAt && !endedAt) {
 		return ''; // Loaded
