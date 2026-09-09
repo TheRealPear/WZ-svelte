@@ -20,19 +20,19 @@
     },
     "devDependencies": {
         "@iconify-json/heroicons": "^1.2.3",
-        "@iconify-json/simple-icons": "^1.2.93",
+        "@iconify-json/simple-icons": "^1.2.95",
         "@sveltejs/adapter-auto": "^7.0.1",
-        "@sveltejs/kit": "^2.70.2",
+        "@sveltejs/kit": "^2.70.3",
         "@sveltejs/vite-plugin-svelte": "^7.3.0",
         "@tailwindcss/typography": "^0.5.20",
         "@tailwindcss/vite": "^4.3.3",
-        "daisyui": "^5.7.16",
-        "svelte": "^5.56.8",
-        "svelte-check": "^4.7.5",
+        "daisyui": "^5.7.32",
+        "svelte": "^5.57.0",
+        "svelte-check": "^4.7.6",
         "tailwindcss": "^4.3.3",
         "typescript": "^6.0.3",
         "unplugin-icons": "^23.0.1",
-        "vite": "^8.2.1"
+        "vite": "^8.2.2"
     },
     "engines": {
         "node": ">=22"
