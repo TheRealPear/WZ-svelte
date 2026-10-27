@@ -68,7 +68,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
     return {
       staffRanks: [] as StaffRank[],
       staffPlayers: {} as Record<string, Player[]>,
-      error: 'Failed to load staff data'
+      error: 'The staff roster is currently unavailable. Please try again later.'
     };
   }
 };
