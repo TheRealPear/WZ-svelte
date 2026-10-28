@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "type": 17,
+      "accent_color": 9521363,
+      "components": [
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "## [{{username}}](https://warzone.network/p/{{username}})\n**Highest Rank Title**\n**Level:** #"
+            }
+          ],
+          "accessory": {
+            "type": 11,
+            "media": {
+              "url": "https://minotar.net/helm/MHF_Steve.png"
+            }
+          }
+        },
+        {
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "type": 10,
+          "content": "### Activity\n**First Join:** <t:1793157525:d> | **Last Seen:** <t:1733157541:d>\n**Hours Spent:** # | **Matches Played:** #"
+        },
+        {
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "type": 10,
+          "content": "### Stats at a Glance\n**Kills:** # | **Deaths:** #\n**Wins:** # | **Ties:** # | **Losses:** #\n\n-# Profile details provided by Warzone."
+        }
+      ]
+    }
+  ],
+  "flags": 32768
+}

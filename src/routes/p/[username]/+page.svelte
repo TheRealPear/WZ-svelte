@@ -45,8 +45,16 @@
       ? 'View a Warzone player profile, including activity, stats, ranks, and achievements.'
       : `View the Warzone profile for ${name}, including activity, stats, ranks, and achievements.`;
 
+  //TEMPORARY
+  import { page } from '$app/state';
+
+  $: embedUrl = `${page.url.origin}${page.url.pathname}/embed`;
+
 </script>
 
+<svelte:head>
+  <link rel="discord:component-embed" type="application/json" href={embedUrl} />
+</svelte:head>
 <Metadata title={name} description={pageDescription} />
 
 <div class="mx-auto max-w-5xl w-full space-y-4 [&_.card]:bg-base-100">
