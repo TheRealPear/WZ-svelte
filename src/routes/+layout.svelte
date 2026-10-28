@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
-  import Navbar from '$lib/components/navbar.svelte'
-  import Footer from '$lib/components/footer.svelte'
+  import Navbar from '#lib/components/navbar.svelte'
+  import Footer from '#lib/components/footer.svelte'
   import { page } from '$app/state';
 
   let { children } = $props();

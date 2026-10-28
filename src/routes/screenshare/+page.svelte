@@ -1,6 +1,6 @@
 <script lang="ts">
   import ExclamationTriangle from 'virtual:icons/heroicons/exclamation-triangle';
-  import Metadata from '$lib/components/Metadata.svelte';
+  import Metadata from '#lib/components/Metadata.svelte';
 </script>
 
 <Metadata

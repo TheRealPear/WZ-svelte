@@ -1,6 +1,6 @@
 <script lang="ts">
-  import FeatureGrid from "$lib/components/FeatureGrid.svelte";
-  import Metadata from '$lib/components/Metadata.svelte';
+  import FeatureGrid from "#lib/components/FeatureGrid.svelte";
+  import Metadata from '#lib/components/Metadata.svelte';
 
   async function copyButton(e: MouseEvent) {
     const btn = e.currentTarget;

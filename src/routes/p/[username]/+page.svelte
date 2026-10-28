@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import Metadata from '$lib/components/Metadata.svelte';
-  import { formatDate, formatDateSimplified, formatHours } from '$lib/scripts/date';
-  import { calculateLevel, formatXPProgress } from '$lib/scripts/pgm';
+  import Metadata from '#lib/components/Metadata.svelte';
+  import { formatDate, formatDateSimplified, formatHours } from '#lib/scripts/date.js';
+  import { calculateLevel, formatXPProgress } from '#lib/scripts/pgm.js';
   import Trophy from 'virtual:icons/heroicons/trophy';
 
   export let data: PageData;

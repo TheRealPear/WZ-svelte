@@ -1,4 +1,4 @@
-import { loadCachedWarzoneJson, setPublicCacheHeaders } from '$lib/server/warzone-api';
+import { loadCachedWarzoneJson, setPublicCacheHeaders } from '#lib/server/warzone-api.js';
 import type { PageServerLoad } from './$types';
 
 type Rank = {

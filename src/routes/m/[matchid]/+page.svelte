@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import Metadata from '$lib/components/Metadata.svelte';
-  import { displayGamemode, getElapsedMatchTime, formatMatchTime } from '$lib/scripts/pgm';
+  import Metadata from '#lib/components/Metadata.svelte';
+  import { displayGamemode, getElapsedMatchTime, formatMatchTime } from '#lib/scripts/pgm.js';
   import Clock from 'virtual:icons/heroicons/clock';
   export let data: PageData;
 

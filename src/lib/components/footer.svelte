@@ -1,5 +1,5 @@
 <script lang="ts">
-  import config from '$lib/config.json';
+  import config from '#lib/config.json';
   import Discord from 'virtual:icons/simple-icons/discord';
   import Twitter from 'virtual:icons/simple-icons/twitter';
   import GitHub from 'virtual:icons/simple-icons/github';

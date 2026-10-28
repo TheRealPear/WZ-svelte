@@ -1,7 +1,7 @@
 <script lang="ts">
-  import config from '$lib/config.json';
-  import navigation from '$lib/navigation';
-  import Searchbar from '$lib/components/Searchbar.svelte'
+  import config from '#lib/config.json';
+  import navigation from '#lib/navigation.js';
+  import Searchbar from '#lib/components/Searchbar.svelte'
 </script>
 
 <nav class="navbar bg-base-300 shadow-sm">

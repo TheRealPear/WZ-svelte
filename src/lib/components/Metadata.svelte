@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import config from '$lib/config.json';
+  import config from '#lib/config.json';
 
   const DEFAULT_DESCRIPTION =
     'Warzone offers objective-based Minecraft PvP with a huge map pool, dynamic gameplay, and a long-running community.';

@@ -1,5 +1,5 @@
-import retiredRaw from '$lib/retired.json';
-import { loadCachedWarzoneJson, loadFromCache, setPublicCacheHeaders } from '$lib/server/warzone-api';
+import retiredRaw from '#lib/retired.json';
+import { loadCachedWarzoneJson, loadFromCache, setPublicCacheHeaders } from '#lib/server/warzone-api.js';
 import type { PageServerLoad } from './$types';
 
 type RetiredEntry = {
