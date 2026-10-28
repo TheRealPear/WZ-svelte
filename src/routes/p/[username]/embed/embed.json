@@ -1,5 +1,5 @@
 {
-  "components": [
+  "component": [
     {
       "type": 17,
       "accent_color": 9521363,
@@ -39,6 +39,5 @@
         }
       ]
     }
-  ],
-  "flags": 32768
+  ]
 }
