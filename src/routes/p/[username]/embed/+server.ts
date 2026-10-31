@@ -101,7 +101,7 @@ export async function GET({ params, fetch }) {
               `### Stats at a Glance\n` +
               `**Kills:** ${stats.kills ?? 0} | **Deaths:** ${stats.deaths ?? 0}\n` +
               `**Wins:** ${stats.wins ?? 0} | **Ties:** ${stats.ties ?? 0} | **Losses:** ${stats.losses ?? 0}\n\n` +
-              `-# Profile details provided by Warzone.`
+              `-# <:warzone:359887218845810698> Profile details provided by Warzone.`
           }
         ]
       }
