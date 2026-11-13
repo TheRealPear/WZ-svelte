@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import { onMount } from 'svelte';
-  import Metadata from '$lib/components/Metadata.svelte';
-  import MapCard from '$lib/components/MapCard.svelte';
+  import Metadata from '#lib/components/Metadata.svelte';
+  import MapCard from '#lib/components/MapCard.svelte';
 
   interface MapEntry {
     id: string;

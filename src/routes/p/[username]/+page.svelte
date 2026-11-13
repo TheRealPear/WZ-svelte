@@ -1,8 +1,9 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import Metadata from '$lib/components/Metadata.svelte';
-  import { formatDate, formatDateSimplified, formatHours } from '$lib/scripts/date';
-  import { calculateLevel, formatXPProgress } from '$lib/scripts/pgm';
+  import { page } from '$app/state';
+  import Metadata from '#lib/components/Metadata.svelte';
+  import { formatDate, formatDateSimplified, formatHours } from '#lib/scripts/date.js';
+  import { calculateLevel, formatXPProgress } from '#lib/scripts/pgm.js';
   import Trophy from 'virtual:icons/heroicons/trophy';
 
   export let data: PageData;
@@ -28,6 +29,14 @@
     color?: string;
   }[];
 
+  // Metadata
+  const pageDescription =
+    name === 'Unknown'
+      ? 'View a Warzone player profile, including activity, stats, ranks, and achievements.'
+      : `View the Warzone profile for ${name}, including activity, stats, ranks, and achievements.`;
+
+  $: embedUrl = `${page.url.origin}${page.url.pathname}/embed`;
+
   // Achievements handling
   type AchievementItem = {
     id: string;
@@ -40,13 +49,12 @@
 
   // List of all achievements
   const achievements = (data.achievements ?? []) as AchievementItem[];
-  const pageDescription =
-    name === 'Unknown'
-      ? 'View a Warzone player profile, including activity, stats, ranks, and achievements.'
-      : `View the Warzone profile for ${name}, including activity, stats, ranks, and achievements.`;
 
 </script>
 
+<svelte:head>
+  <link rel="discord:component-embed" type="application/json" href={embedUrl} />
+</svelte:head>
 <Metadata title={name} description={pageDescription} />
 
 <div class="mx-auto max-w-5xl w-full space-y-4 [&_.card]:bg-base-100">

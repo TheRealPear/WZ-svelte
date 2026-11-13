@@ -1,4 +1,4 @@
-import config from '$lib/config.json';
+import config from '#lib/config.json';
 
 type FetchLike = typeof fetch;
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import Metadata from '$lib/components/Metadata.svelte';
+  import Metadata from '#lib/components/Metadata.svelte';
   import ArrowLeft from 'virtual:icons/heroicons/arrow-left';
   import Home from 'virtual:icons/heroicons/home';
 

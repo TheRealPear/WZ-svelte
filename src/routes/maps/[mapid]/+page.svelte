@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { PageData } from './$types';
-    import Metadata from '$lib/components/Metadata.svelte';
-    import { displayGamemode, formatMatchTime } from '$lib/scripts/pgm';
+    import Metadata from '#lib/components/Metadata.svelte';
+    import { displayGamemode, formatMatchTime } from '#lib/scripts/pgm.js';
     export let data: PageData;
 
     const map = (data.map ?? {}) as any;

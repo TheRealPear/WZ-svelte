@@ -1,4 +1,4 @@
-// place files you want to import through the `$lib` alias in this folder.
+// place files you want to import through the `#lib` alias in this folder.
 
 // retired.json - List of former Warzone staff
 // Some staff may have multiple tenures. Use the most recent for the date field.

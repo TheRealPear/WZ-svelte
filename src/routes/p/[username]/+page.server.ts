@@ -1,6 +1,6 @@
-import config from '$lib/config.json';
+import config from '#lib/config.json';
 import { error } from '@sveltejs/kit';
-import { loadCachedWarzoneJson, loadFromCache, setPublicCacheHeaders } from '$lib/server/warzone-api';
+import { loadCachedWarzoneJson, loadFromCache, setPublicCacheHeaders } from '#lib/server/warzone-api.js';
 import type { PageServerLoad } from './$types';
 
 type AchievementDefinition = {
