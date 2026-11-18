@@ -5,11 +5,6 @@ import tailwindcss from '@tailwindcss/vite';
 import Icons from 'unplugin-icons/vite';
 import { defineConfig } from 'vite';
 
-// Trick adapter-auto into supporting Cloudflare Workers since Pages is deprecated; do not touch, otherwise, it will not deploy
-if (process.env.WORKERS_CI) {
-	process.env.CF_PAGES = '1';
-}
-
 export default defineConfig({
   plugins: [
     sveltekit({ preprocess: vitePreprocess(), adapter: adapter() }),
